@@ -1,12 +1,9 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 .sideNav {
   position: fixed;
   top: 50%;
   bottom: 50%;
   transform: translate(0, -50%);
-  background-color: green;
+  background-color: orange;
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -24,9 +21,9 @@
   padding: 0;
   margin: 0;
   position: absolute;
-  top: 50%; /* Pour aligner horizontalement avec le centre de .round-container */
-  left: 50%; /* Pour aligner verticalement avec le centre de .round-container */
-  transform: translate(-50%, -50%); /* Centrer la liste dans .round-container */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 0;
   height: 100%;
   display: flex;
@@ -37,30 +34,55 @@
   width: 180px;
   text-align: start;
   margin: 10px;
-  padding-left: 100px;
   position: absolute;
   transform: rotate(0deg);
+  transition: transform 0.3s;
+}
+.sideNav .round-container li span {
+  color: purple;
 }
 .sideNav .round-container li:nth-child(1) {
   transform-origin: 0% 50%;
   transform: rotate(-40deg);
 }
-.sideNav .round-container li:nth-child(1)::after {
-  content: "f007";
+.sideNav .round-container li:nth-child(1):hover {
+  transform: rotate(-40deg) translateX(100px);
 }
 .sideNav .round-container li:nth-child(2) {
   transform-origin: 0% 50%;
-  transform: rotate(-10deg);
+  transform: rotate(-15deg);
+}
+.sideNav .round-container li:nth-child(2):hover {
+  transform: rotate(-15deg) translateX(100px);
 }
 .sideNav .round-container li:nth-child(3) {
   transform-origin: 0% 50%;
-  transform: rotate(10deg);
+  transform: rotate(15deg);
+}
+.sideNav .round-container li:nth-child(3):hover {
+  transform: rotate(15deg) translateX(100px);
 }
 .sideNav .round-container li:nth-child(4) {
   transform-origin: 0% 50%;
   transform: rotate(40deg);
 }
+.sideNav .round-container li:nth-child(4):hover {
+  transform: rotate(40deg) translateX(100px);
+}
 
 h1 {
   color: red;
+}
+
+*:not(a) {
+  cursor: default;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 95vh;
+  margin-left: 200px;
+  border: solid blue 1px;
 }/*# sourceMappingURL=globals.css.map */
