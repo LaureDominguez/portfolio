@@ -1,0 +1,13 @@
+.jobs{
+    color: green;
+}
+
+.educ{
+    color: purple;
+    .degree, .school{
+        font-size: smaller;
+    }
+    .school{
+        font-style: italic;
+    }
+}

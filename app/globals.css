@@ -3,78 +3,108 @@
   top: 50%;
   bottom: 50%;
   transform: translate(0, -50%);
-  background-color: orange;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
 }
 .sideNav .round-container {
-  width: 200px;
-  height: 200px;
+  background-color: var(--deep-purple);
+  width: 150vh;
+  height: 150vh;
   border-radius: 50%;
-  position: relative;
-  display: flex;
-  align-items: center;
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  transform: translate(-90%, -50%);
 }
 .sideNav .round-container ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  z-index: 1000;
+  height: 50vh;
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 0;
-  height: 100%;
+  bottom: 50%;
+  left: 90%;
+  transform: translate(0, -50%);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
 }
-.sideNav .round-container li {
-  width: 180px;
-  text-align: start;
-  margin: 10px;
-  position: absolute;
-  transform: rotate(0deg);
-  transition: transform 0.3s;
+.sideNav .round-container ul li {
+  margin: 1rem;
 }
-.sideNav .round-container li span {
+.sideNav .round-container ul li a {
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+.sideNav .round-container ul li a .navTitle {
+  transition: all 0.3s ease-in;
+  z-index: 5000;
+  color: transparent;
+}
+.sideNav .round-container ul li a:hover {
+  color: var(--deep-purple);
+  background-color: #fff;
+  border-radius: 100px;
+  height: 3rem;
+  width: 150px;
+  transition: all 0.3s ease-in;
+}
+.sideNav .round-container ul li a:hover > .navTitle {
+  color: var(--deep-purple);
+  transform: translateX(100px);
+}
+.sideNav .round-container ul li a:hover > .navIcon {
+  color: var(--deep-purple);
+}
+.sideNav .round-container ul li .navIcon {
+  position: fixed;
+  height: 2rem;
+  color: var(--pastel-purple);
+  padding: 1rem;
+}
+.sideNav .round-container ul li:nth-child(2), .sideNav .round-container ul li:nth-child(4) {
+  margin-left: 1.8rem;
+}
+.sideNav .round-container ul li:nth-child(3) {
+  margin-left: 2.4rem;
+}
+
+.about {
+  color: blue;
+}
+
+.jobs {
+  color: green;
+}
+
+.educ {
   color: purple;
 }
-.sideNav .round-container li:nth-child(1) {
-  transform-origin: 0% 50%;
-  transform: rotate(-40deg);
+.educ .degree, .educ .school {
+  font-size: smaller;
 }
-.sideNav .round-container li:nth-child(1):hover {
-  transform: rotate(-40deg) translateX(100px);
+.educ .school {
+  font-style: italic;
 }
-.sideNav .round-container li:nth-child(2) {
-  transform-origin: 0% 50%;
-  transform: rotate(-15deg);
-}
-.sideNav .round-container li:nth-child(2):hover {
-  transform: rotate(-15deg) translateX(100px);
-}
-.sideNav .round-container li:nth-child(3) {
-  transform-origin: 0% 50%;
-  transform: rotate(15deg);
-}
-.sideNav .round-container li:nth-child(3):hover {
-  transform: rotate(15deg) translateX(100px);
-}
-.sideNav .round-container li:nth-child(4) {
-  transform-origin: 0% 50%;
-  transform: rotate(40deg);
-}
-.sideNav .round-container li:nth-child(4):hover {
-  transform: rotate(40deg) translateX(100px);
+
+:root {
+  --deep-purple: #551A8B;
+  --purple: #8C52FF;
+  --light-purple: #8B73FF;
+  --pastel-purple: #D9D7FF;
 }
 
 h1 {
-  color: red;
+  color: var(--purple);
 }
 
-*:not(a) {
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+*:not(a, .navIcon, .navTitle) {
   cursor: default;
 }
 

@@ -1,0 +1,54 @@
+[
+	{
+		"title": "Développeur web",
+		"date": "2022 - 2023",
+		"degree": "RNCP niveau 5",
+		"school": "3W Academy – Chambéry",
+		"description": [
+			"Conception de site web (HTML, CSS, JavaScript, PHP, SQL)",
+			"Création de site WordPress",
+			"Utilisation de librairies et Framework (3W, Bootstrap, Symfony)"
+		]
+	},
+	{
+		"title": "Admin Systèmes et Réseaux Cloud",
+		"date": "2021",
+		"degree": null,
+		"school": "Global Knowledge – Lyon",
+		"description": [
+			"Azure, Amazon Web Services",
+			"Base de données SQL",
+			"Gestion Microsoft 365 (Sharepoint, Teams, Outlook)"
+		]
+	},
+	{
+		"title": "Technicien Systèmes, Réseaux et Sécurité",
+		"date": "2017 - 2019",
+		"degree": "RNCP niveau 5",
+		"school": "Institut Poly Informatique – Paris",
+		"description": [
+			"Serveur (Active Directory, Mail)",
+			"Électronique PC et smartphone",
+			"Développement C++, Python"
+		]
+	},
+	{
+		"title": "Développeur web",
+		"date": "2015 - 2016",
+		"degree": null,
+		"school": "OpenClassrooms - Site de formations en ligne",
+		"description": ["Conception de site web (HTML, CSS)"]
+	},
+	{
+		"title": "Infographiste",
+		"date": "2013 - 2014",
+		"degree": "RNCP niveau 3",
+		"school": "MJM Graphic Design – Paris",
+		"description": [
+			"Traitement d’images bitmap et vectorielles (Photoshop, Illustrator)",
+			"Réalisation de support visuel (InDesign)",
+			"Réalisation de maquette pour site web",
+			"Conception d’éléments graphiques"
+		]
+	}
+]
