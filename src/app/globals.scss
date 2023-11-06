@@ -1,0 +1,30 @@
+@import './components/nav';
+@import './pages/about/about';
+@import './pages/career/career';
+
+:root{
+    --deep-purple: #551A8B;
+    --purple: #8C52FF;
+    --light-purple: #8B73FF;
+    --pastel-purple: #D9D7FF;
+}
+
+h1{
+    color: var(--purple);
+}
+
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    &:not(a, .navIcon, .navTitle){
+        cursor:default;
+    }
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 95vh;
+    margin-left: 200px;
+    border: solid blue 1px;
+}

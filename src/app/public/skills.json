@@ -1,0 +1,31 @@
+{
+	"langages": [
+		"HTML",
+		"CSS / SCSS",
+		"JavaScript",
+		"TypeScript",
+		"PHP",
+		"SQL"
+	],
+	"frameworks": [
+		"React",
+		"Next.js",
+		"Angular",
+		"Symfony",
+		"Laravel",
+		"WordPress",
+		"Photoshop"
+	],
+	"softSkills": [
+		"Esprit d'équipe",
+		"Dynamique",
+		"Curieuse",
+		"Créative",
+		"Organisée"
+	],
+	"divers": {
+		"language" : "Anglais B2",
+		"licence" : "Permis B + véhicule",
+		"RQTH" : "RQTH sans aménagement de poste"
+	}
+}
