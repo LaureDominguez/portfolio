@@ -4,7 +4,6 @@ import './globals.css'
 
 import Nav from './components/Nav';
 
-
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { faTwitter, faFontAwesome } from '@fortawesome/free-brands-svg-icons';
@@ -25,7 +24,7 @@ export default function RootLayout({
 }) {
   return (
 		<html lang="en">
-			<body className={inter.className}>
+			<body>
 				<Nav />
 				{children}
 			</body>

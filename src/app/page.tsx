@@ -1,6 +1,6 @@
 const Home = () => {
 	return (
-		<div>
+		<main>
 			<h1>Bonjour et bienvenue sur mon site !</h1>
 			<p>
 				Je suis ravi de vous accueillir sur ma page de présentation.
@@ -20,7 +20,7 @@ const Home = () => {
 				<br />
 				Je suis impatiente de relever de nouveaux défis avec vous !
 			</p>
-		</div>
+		</main>
 	);
 };
 

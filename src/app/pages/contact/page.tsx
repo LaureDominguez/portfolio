@@ -2,8 +2,8 @@ import contactData from '@/app/public/contact.json';
 
 const Contact = () => {
 	return (
-		<div>
-			<h1>Bienvenue sur la page contact</h1>
+		<main>
+			<h1>Contactez-moi !</h1>
 			<form>
 				<input
 					type="text"
@@ -16,7 +16,6 @@ const Contact = () => {
 				<textarea placeholder="Votre message" />
 				<button type="submit">Envoyer</button>
 			</form>
-			<h2>contactez-moi</h2>
 			<ul>
 				<li>{contactData.postMail}</li>
 				<li>{contactData.email}</li>
@@ -24,7 +23,7 @@ const Contact = () => {
 				<li>{contactData.linkedIn}</li>
 				<li>{contactData.gitHub}</li>
 			</ul>
-		</div>
+		</main>
 	);
 };
 

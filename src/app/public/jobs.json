@@ -4,7 +4,7 @@
 		"date": "Depuis 2023",
 		"duration": null,
 		"company": "Freelance",
-		"description" : [
+		"description": [
 			"Analyse des besoins du client et conception visuelle du site",
 			"Conception de la base de donnée MySQL - PHPMyAdmin",
 			"Développement Frontend en HTML, SCSS et JavaScript",
@@ -16,9 +16,36 @@
 		"date": "2023",
 		"duration": "3 mois",
 		"company": "Edgyn",
-		"description" : [
+		"description": [
 			"Support client en milieu industriel",
 			"Préparation et contrôle qualité"
+		]
+	},
+	{
+		"title": "Développeur FrontEnd - Angular",
+		"date": "2022",
+		"duration": "1 mois",
+		"company": "WiseBIM",
+		"description": [
+			"Développement de composants Angular - TypeScript",
+			"Propositions de concepts graphiques"
+		]
+	},
+	{
+		"title": "Technicien de Support Informatique",
+		"date": "2017 - 2019",
+		"duration": "2 ans",
+		"company": "MAPA",
+		"description": [
+			"Maintenance d’un parc informatique de 300 postes, dont 50 à distance",
+			"Déploiement et maintenance des environnements Windows / Android / IOS",
+			"Gestion des tickets modérateurs sur Service Now",
+			"Création et gestion d’objets Active Directory",
+			"Gestion des services Bitlocker MBAM, Bitdefender Gravity Zone, MFA, VPN Cisco AnyConnect",
+			"Gestion de la téléphonie VOIP (Alcatel Omni PCX Entreprise / OmniVista)",
+			"Gestion et sécurisation de la téléphonie mobile sur MAAS 360",
+			"Gestion des lignes SFR Business Pro",
+			"Rédaction de procédures et documentations techniques"
 		]
 	}
 ]

@@ -5,8 +5,8 @@
     transform: translate(0, -50%);
     .round-container{
         background-color: var(--deep-purple);
-        width: 150vh;
-        height: 150vh;
+        width: 130vh;
+        height: 130vh;
         border-radius: 50%;
         position: absolute;
         top: 50%;
@@ -17,7 +17,7 @@
             padding: 0;
             margin: 0;
             z-index: 1000;
-            height: 50vh;
+            height: 60vh;
             position: absolute;
             top: 50%;
             bottom: 50%;
@@ -27,7 +27,7 @@
             flex-direction: column;
             justify-content: space-evenly;
             li {
-                margin: 1rem;
+                // margin: 1rem;
                 a{
                     display: flex;
                     align-items: center;
@@ -46,26 +46,30 @@
                         height: 3rem;
                         width: 150px;
                         transition: all 0.3s ease-in;
+                        // &::before{
+                        //     content: "";
+                        //     border: 5px solid red;
+                        //     border-radius: 100px;
+                        // }
                     }
                     &:hover > .navTitle{
                         color: var(--deep-purple);
-                        transform: translateX(100px);
+                        transform: translateX(50px);
                     }
                     &:hover > .navIcon{
                         color: var(--deep-purple);
                     }
                 }
                 .navIcon{
-                    position: fixed;
-                    height: 2rem;
+                    height: 1.8rem;
                     color: var(--pastel-purple);
-                    padding: 1rem;
+                    padding-left: 1rem;
                 }
                 &:nth-child(2), &:nth-child(4){
-                        margin-left: 1.8rem;
+                        margin-left: 20px;
                     }
                 &:nth-child(3){
-                        margin-left: 2.4rem;
+                        margin-left: 30px;
                     }
             }
         }

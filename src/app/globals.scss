@@ -9,11 +9,15 @@
     --pastel-purple: #D9D7FF;
 }
 
-h1{
+h1, h2{
     color: var(--purple);
+    &::first-letter{
+        text-transform: capitalize;
+    }
 }
 
 *{
+    box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     &:not(a, .navIcon, .navTitle){
         cursor:default;
@@ -22,9 +26,9 @@ h1{
 
 main{
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     min-height: 95vh;
     margin-left: 200px;
-    border: solid blue 1px;
 }

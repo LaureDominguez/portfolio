@@ -3,8 +3,8 @@ import skillsData from '@/app/public/skills.json';
 
 const About = () => {
 	return (
-		<div>
-			<h1>Bienvenue sur la page About</h1>
+		<main>
+			<h1>à propos de moi :</h1>
 			<article className="about">
 				<h2>
 					{contactData.firstName} {contactData.lastName}
@@ -43,7 +43,7 @@ const About = () => {
 					</ul>
 				</div>
 			</article>
-		</div>
+		</main>
 	);
 };
 

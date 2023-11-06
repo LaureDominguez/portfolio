@@ -2,55 +2,41 @@ import jobsData from '@/app/public/jobs.json';
 import educData from '@/app/public/educ.json';
 
 const Career = () => {
+	const combinedData: Array<any> = [...jobsData, ...educData];
 	return (
-		<div>
-			<h1>Bienvenue sur la page Career</h1>
-
-			<article className="jobs">
-				<h2>Expériences Professionnelles</h2>
-				{jobsData.map((job, index) => (
-					<div key={index}>
+		<main>
+			<h1>Mon parcours professionnel :</h1>
+			<div className="timeline">
+				{combinedData.map((item, index) => (
+					<article
+						key={index}
+						className={item.hasOwnProperty('company') ? 'jobs' : 'educ'}
+					>
 						<h3>
-							{job.date}
-							{job.duration !== null ? ' | ' + job.duration : ''}
-							{' | ' + job.title}
-							{' | ' + job.company}
+							{item.date}
+							{item.hasOwnProperty('duration') && item.duration !== null
+								? ' | ' + item.duration
+								: ''}
+							{' | ' + item.title}
+							{item.hasOwnProperty('company') ? ' | ' + item.company : ''}
+							{item.hasOwnProperty('degree') && item.degree !== null ? (
+								<span className="degree">{', ' + item.degree}</span>
+							) : ''}
+							{item.hasOwnProperty('school') && (
+								<span className="school"><br/>{item.school}</span>
+							)}
 						</h3>
-						{job.description && (
+						{item.description && (
 							<ul>
-								{job.description.map((desc, descIndex) => (
+								{item.description.map((desc: string, descIndex: number) => (
 									<li key={descIndex}>{desc}</li>
 								))}
 							</ul>
 						)}
-					</div>
+					</article>
 				))}
-			</article>
-
-			<article className="educ">
-				<h2>Formations</h2>
-				{educData.map((educ, index) => (
-					<div key={index}>
-						<h3>
-							{educ.date}
-							{' | ' + educ.title}
-							<span className="degree">
-								{educ.degree !== null ? ', ' + educ.degree : ''}
-							</span>
-							<br />
-							<span className="school">{educ.school}</span>
-						</h3>
-						{educ.description && (
-							<ul>
-								{educ.description.map((desc, descIndex) => (
-									<li key={descIndex}>{desc}</li>
-								))}
-							</ul>
-						)}
-					</div>
-				))}
-			</article>
-		</div>
+			</div>
+		</main>
 	);
 };
 
