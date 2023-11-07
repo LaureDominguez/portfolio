@@ -1,77 +1,80 @@
-.sideNav{
-    position: fixed;
-    top: 50%;
-    bottom: 50%;
-    transform: translate(0, -50%);
-    .round-container{
-        background-color: var(--deep-purple);
-        width: 130vh;
-        height: 130vh;
-        border-radius: 50%;
-        position: absolute;
-        top: 50%;
-        bottom: 50%;
-        transform: translate(-90%, -50%);
-        ul{
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            z-index: 1000;
-            height: 60vh;
-            position: absolute;
-            top: 50%;
-            bottom: 50%;
-            left: 90%;
-            transform: translate(0, -50%);            
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            li {
-                // margin: 1rem;
-                a{
-                    display: flex;
-                    align-items: center;
-                    height: 3rem;
-                    text-decoration: none;
-                    font-weight: bold;
-                    .navTitle{
-                        transition: all 0.3s ease-in;
-                        z-index: 5000;
-                        color: transparent;
-                    }
-                    &:hover{
-                        color: var(--deep-purple);
-                        background-color: #fff;
-                        border-radius: 100px;
-                        height: 3rem;
-                        width: 150px;
-                        transition: all 0.3s ease-in;
-                        // &::before{
-                        //     content: "";
-                        //     border: 5px solid red;
-                        //     border-radius: 100px;
-                        // }
-                    }
-                    &:hover > .navTitle{
-                        color: var(--deep-purple);
-                        transform: translateX(50px);
-                    }
-                    &:hover > .navIcon{
-                        color: var(--deep-purple);
-                    }
-                }
-                .navIcon{
-                    height: 1.8rem;
-                    color: var(--pastel-purple);
-                    padding-left: 1rem;
-                }
-                &:nth-child(2), &:nth-child(4){
-                        margin-left: 20px;
-                    }
-                &:nth-child(3){
-                        margin-left: 30px;
-                    }
-            }
-        }
-    }
+.sideNav {
+	position: fixed;
+	top: 50%;
+	bottom: 50%;
+	transform: translate(0, -50%);
+	.round-container {
+		background-color: var(--deep-purple);
+		width: 130vh;
+		height: 130vh;
+		border-radius: 50%;
+		position: absolute;
+		top: 50%;
+		bottom: 50%;
+		transform: translate(-90%, -50%);
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			z-index: 1000;
+			height: 60vh;
+			position: absolute;
+			top: 50%;
+			bottom: 50%;
+			left: 90%;
+			transform: translate(0, -50%);
+			display: flex;
+			flex-direction: column;
+			justify-content: space-evenly;
+			li {
+				// margin: 1rem;
+				a {
+					display: flex;
+					align-items: center;
+					height: 3rem;
+                    width: 150px;
+					text-decoration: none;
+					font-weight: bold;
+					.navTitle {
+						transition: all 0.3s ease-in;
+						z-index: 5000;
+						color: transparent;
+					}
+					&:hover {
+						color: var(--deep-purple);
+						background: linear-gradient(90deg, rgba(255,255,255,1) 20%, rgba(0,0,0,0) 100%);
+						border-radius: 100px;
+						height: 3rem;
+						width: 190px;
+                        box-shadow: 16px 10px 15px -3px rgba(0,0,0,0.1);
+						transition: width 0.3s ease-in;
+						// &::before{
+						//     content: "";
+						//     border: 5px solid red;
+						//     border-radius: 100px;
+						// }
+					}
+					&:hover > .navTitle {
+						color: var(--deep-purple);
+						transform: translateX(30px);
+					}
+					&:hover > .navIcon {
+						color: var(--deep-purple);
+					}
+				}
+				.navIcon {
+					height: 1.8rem;
+					color: var(--pastel-purple);
+					padding-left: 1rem;
+				}
+				&:nth-child(2),
+				&:nth-child(4) {
+					margin-left: 20px;
+				}
+				&:nth-child(3) {
+					margin-left: 30px;
+				}
+			}
+		}
+	}
 }

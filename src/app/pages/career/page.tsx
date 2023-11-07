@@ -1,40 +1,61 @@
+'use client'
 import jobsData from '@/app/public/jobs.json';
 import educData from '@/app/public/educ.json';
+import { useState } from 'react';
+import classNames from 'classnames';
 
 const Career = () => {
 	const combinedData: Array<any> = [...jobsData, ...educData];
+	const [active, setActive] = useState(-1);
+
+	const handleArticleClick = (index: number) => {
+		setActive(index);
+	}
+
 	return (
 		<main>
-			<h1>Mon parcours professionnel :</h1>
-			<div className="timeline">
-				{combinedData.map((item, index) => (
-					<article
-						key={index}
-						className={item.hasOwnProperty('company') ? 'jobs' : 'educ'}
-					>
-						<h3>
-							{item.date}
-							{item.hasOwnProperty('duration') && item.duration !== null
-								? ' | ' + item.duration
-								: ''}
-							{' | ' + item.title}
-							{item.hasOwnProperty('company') ? ' | ' + item.company : ''}
-							{item.hasOwnProperty('degree') && item.degree !== null ? (
-								<span className="degree">{', ' + item.degree}</span>
-							) : ''}
-							{item.hasOwnProperty('school') && (
-								<span className="school"><br/>{item.school}</span>
+			<div className="container career">
+				<h1>Mon parcours professionnel :</h1>
+				<div className="timeline">
+					{combinedData.map((item, index) => (
+						<article
+							key={index}
+							className={classNames({
+								jobs: item.hasOwnProperty('company'),
+								educ: !item.hasOwnProperty('company'),
+								active: index === active,
+							})}
+							onClick={() => handleArticleClick(index)}
+						>
+							<h3>
+								{item.date}
+								{item.hasOwnProperty('duration') && item.duration !== null
+									? ' | ' + item.duration
+									: ''}
+								{' | ' + item.title}
+								{item.hasOwnProperty('company') ? ' | ' + item.company : ''}
+								{item.hasOwnProperty('degree') && item.degree !== null ? (
+									<span className="degree">{', ' + item.degree}</span>
+								) : (
+									''
+								)}
+								{item.hasOwnProperty('school') && (
+									<span className="school">
+										<br />
+										{item.school}
+									</span>
+								)}
+							</h3>
+							{item.description && (
+								<ul>
+									{item.description.map((desc: string, descIndex: number) => (
+										<li key={descIndex}>{desc}</li>
+									))}
+								</ul>
 							)}
-						</h3>
-						{item.description && (
-							<ul>
-								{item.description.map((desc: string, descIndex: number) => (
-									<li key={descIndex}>{desc}</li>
-								))}
-							</ul>
-						)}
-					</article>
-				))}
+						</article>
+					))}
+				</div>
 			</div>
 		</main>
 	);
