@@ -47,5 +47,60 @@
 			"Gestion des lignes SFR Business Pro",
 			"Rédaction de procédures et documentations techniques"
 		]
+	},
+	{
+		"title": "Consultante en art plastique",
+		"date": "2015 - 2017",
+		"duration": "2 ans",
+		"company": "Microlycée 93",
+		"description": [
+			"Initiation à l'infographie en partenariat avec l'équipe pédagogique",
+			"Préparation et animation d'activités à destination de jeunes adultes"
+		]
+	},
+	{
+		"title": "Employée polyvalente",
+		"date": "2016",
+		"duration": "2 mois",
+		"company": "KFC",
+		"description": [
+			"Accueil des clients et prise de commande au comptoire et au drive",
+			"Tenue de la caisse",
+			"Préparation des commandes",
+			"Cuisine et plonge",
+			"Entretien de la salle et des parties communes"
+		]
+	},
+	{
+		"title": "Agent d'accueil",
+		"date": "2015",
+		"duration": "1 mois",
+		"company": "RATP",
+		"description": [
+			"Accueil et renseignement des visiteurs lors d'un évènement internationnal",
+			"Anglais professionnel"
+		]
+	},
+	{
+		"title": "Infographiste",
+		"date": "2009",
+		"duration": "2 mois",
+		"company": "AAA",
+		"description": [
+			"Scan de planches de dessins",
+			"Colorisation de planches pour l'animation (Illustrator)",
+			"Techniques d'ombrage (Illustrator)"
+		]
+	},
+	{
+		"title": "Infographiste",
+		"date": "2008",
+		"duration": "1 mois",
+		"company": "Preferundum",
+		"description": [
+			"Retouche et montage photo (Photoshop)",
+			"Mise en page de documents (InDesign)",
+			"Coupe et assemblage de livrets de présentation publicitaire"
+		]
 	}
 ]

@@ -185,20 +185,6 @@ body {
   color: blue;
 }
 
-.jobs {
-  color: green;
-}
-
-.educ {
-  color: purple;
-}
-.educ .degree, .educ .school {
-  font-size: smaller;
-}
-.educ .school {
-  font-style: italic;
-}
-
 .container {
   width: 80%;
   margin: auto;
@@ -210,10 +196,35 @@ body {
   text-align: center;
 }
 
+.headersTimeline {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.timeline article:nth-child(even) > .headersTimeline {
+  flex-direction: row-reverse;
+}
+
+.jobs {
+  color: var(--blue);
+}
+
+.educ {
+  color: var(--rose);
+}
+.educ .degree, .educ .school {
+  font-size: smaller;
+}
+.educ .school {
+  font-style: italic;
+}
+
 .timeline {
   position: relative;
   width: 80%;
   margin: 0 auto;
+  padding: 2rem 0;
   z-index: 10;
 }
 
@@ -258,7 +269,7 @@ body {
 .timeline article:after {
   content: "";
   position: absolute;
-  top: 10px;
+  top: 8px;
   left: 100%;
   width: 0;
   height: 0;
@@ -287,10 +298,6 @@ body {
   padding: 1rem;
 }
 
-.timeline article li:not(:last-child) {
-  border-bottom: 1px #aaa solid;
-}
-
 .timeline article ul {
   max-height: 0;
   overflow: hidden;
@@ -306,8 +313,8 @@ body {
   --purple: #8C52FF;
   --light-purple: #8B73FF;
   --pastel-purple: #D9D7FF;
-  --rose: #E875FF;
-  --blue: #75BAFF;
+  --rose: #f92a82;
+  --blue: #4A26FF;
 }
 
 h1, h2 {

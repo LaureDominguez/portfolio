@@ -2,7 +2,7 @@
 	{
 		"title": "Développeur web",
 		"date": "2022 - 2023",
-		"degree": "RNCP niveau 5",
+		"degree": "RNCP niveau 5 - Bac+2",
 		"school": "3W Academy – Chambéry",
 		"description": [
 			"Conception de site web (HTML, CSS, JavaScript, PHP, SQL)",
@@ -24,7 +24,7 @@
 	{
 		"title": "Technicien Systèmes, Réseaux et Sécurité",
 		"date": "2017 - 2019",
-		"degree": "RNCP niveau 5",
+		"degree": "RNCP niveau 5 - Bac+2",
 		"school": "Institut Poly Informatique – Paris",
 		"description": [
 			"Serveur (Active Directory, Mail)",
@@ -42,12 +42,32 @@
 	{
 		"title": "Infographiste",
 		"date": "2013 - 2014",
-		"degree": "RNCP niveau 3",
+		"degree": "RNCP niveau 5 - Bac+2",
 		"school": "MJM Graphic Design – Paris",
 		"description": [
 			"Traitement d’images bitmap et vectorielles (Photoshop, Illustrator)",
 			"Réalisation de support visuel (InDesign)",
 			"Réalisation de maquette pour site web",
+			"Conception d’éléments graphiques"
+		]
+	},
+	{
+		"title": "Bccalauréat Littéraire",
+		"date": "2010 - 2012",
+		"degree": "Général",
+		"school": "Microlycée 93 - La Courneuve",
+		"description": [
+			"Option art plastique"
+		]
+	},
+	{
+		"title": "Inforgraphie",
+		"date": "2008 - 2009",
+		"degree": null,
+		"school": "CFA Bagnolet",
+		"description": [
+			"Traitement d’images bitmap et vectorielles (Photoshop, Illustrator)",
+			"Réalisation de support visuel (InDesign)",
 			"Conception d’éléments graphiques"
 		]
 	}

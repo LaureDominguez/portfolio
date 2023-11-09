@@ -1,17 +1,3 @@
-.jobs{
-    color: green;
-}
-
-.educ{
-    color: purple;
-    .degree, .school{
-        font-size: smaller;
-    }
-    .school{
-        font-style: italic;
-    }
-}
-
 .container{
     width: 80%;
     margin: auto;
@@ -25,13 +11,44 @@
     }
 }
 
+.headersTimeline{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+// .timeline{
+//     color: var(--rose);
+// }
+
+.timeline article:nth-child(even) > .headersTimeline{
+    flex-direction: row-reverse;
+}
+
+.jobs{
+    color: var(--blue)
+}
+
+.educ{
+    color: var(--rose);
+    .degree, .school{
+        font-size: smaller;
+    }
+    .school{
+        font-style: italic;
+    }
+}
+
+
+///////////////////// Timeline
+
+
 .timeline {
     position: relative;
     width: 80%;
     margin: 0 auto;
-    // padding: 2rem 3rem;
-    // background: #d9d7ff6c;
-    // border-radius: 10px;
+    padding: 2rem 0;
     z-index: 10;
 }
 .timeline:after {
@@ -72,7 +89,7 @@
 .timeline article:after {
     content: "";
     position: absolute;
-    top: 10px;
+    top: 8px;
     left: 100%;
     width: 0;
     height: 0;
@@ -99,9 +116,9 @@
     // list-style: none;
     padding: 1rem;
 }
-.timeline article li:not(:last-child) {
-    border-bottom: 1px #aaa solid;
-}
+// .timeline article li:not(:last-child) {
+//     // border-bottom: 1px #aaa solid;
+// }
 
 .timeline article ul{
     max-height: 0;
