@@ -17,27 +17,69 @@
     justify-content: space-around;
 }
 
+.headersTimeline > *{
+    padding: 0.5rem;
+    margin: 0;
+    text-align: center;
+}
 
-// .timeline{
-//     color: var(--rose);
-// }
 
 .timeline article:nth-child(even) > .headersTimeline{
     flex-direction: row-reverse;
 }
 
+.timeline article:hover{
+    box-shadow: 
+    5px 5px 15px 5px #FF8080, 
+    -9px 5px 15px 5px #FFE488, 
+    -7px -5px 15px 5px #8CFF85, 
+    12px -5px 15px 5px #80C7FF, 
+    12px 10px 15px 7px #E488FF, 
+    -10px 10px 15px 7px #FF616B, 
+    -10px -7px 27px 1px #8E5CFF, 
+    5px 5px 15px 5px rgba(0,0,0,0);
+}
+
+
+.timelineIcon{
+    height: 2rem;
+    width: 2rem;
+}
+
+.date{
+    width: 8rem;
+        .year{
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .duration{
+            line-height: 2rem;
+        }
+    }
+
 .jobs{
     color: var(--blue)
+}
+
+.title{
+    font-size: 1.3rem;
+}
+
+.company{
+    color: var(--purple);
+    line-height: 2rem;
 }
 
 .educ{
     color: var(--rose);
     .degree, .school{
         font-size: smaller;
+        color: var(--purple);
     }
-    .school{
-        font-style: italic;
-    }
+}
+
+.school, .company{
+    font-style: italic;
 }
 
 
@@ -69,6 +111,7 @@
     width: calc( 50% - 40px );
     padding: 1rem;
     border-radius: 10px;
+    transition: all 0.5s ease;
 }
 .timeline article + article {
     margin-top: 1rem;
@@ -113,15 +156,14 @@
 }
 
 .timeline article li {
-    // list-style: none;
-    padding: 1rem;
+    padding: 0.5rem;
+    line-height: 1.5rem;
+    list-style-type: disclosure-closed;
 }
-// .timeline article li:not(:last-child) {
-//     // border-bottom: 1px #aaa solid;
-// }
 
 .timeline article ul{
     max-height: 0;
+    margin: 0;
     overflow: hidden;
     transition: max-height 0.5s ease;
 }

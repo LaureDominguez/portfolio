@@ -1,5 +1,6 @@
 @import './components/nav';
 @import './components/CirclesBackground';
+@import '_home.scss';
 @import './pages/about/about';
 @import './pages/career/career';
 
@@ -12,7 +13,7 @@
     --blue: #4A26FF;
 }
 
-h1, h2{
+h1, h2, h3{
     color: var(--deep-purple);
     &::first-letter{
         text-transform: capitalize;

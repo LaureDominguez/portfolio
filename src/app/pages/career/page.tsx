@@ -45,11 +45,13 @@ const Career = () => {
 					{combinedDataSorted.map((item, index) => (
 						<article
 							key={index}
-							className={classNames({
-								jobs: item.hasOwnProperty('company'),
-								educ: !item.hasOwnProperty('company'),
-								active: activeElements[index],
-							})}
+							className={
+								(classNames({
+									jobs: item.hasOwnProperty('company'),
+									educ: !item.hasOwnProperty('company'),
+									active: activeElements[index],
+								}))
+							}
 							onClick={() => handleArticleClick(index)}
 						>
 							<div className="headersTimeline">
@@ -57,6 +59,7 @@ const Career = () => {
 									icon={
 										item.hasOwnProperty('company') ? faUserTie : faGraduationCap
 									}
+									className="timelineIcon"
 								/>
 								<h3>
 									<span className="title">{item.title}</span>
@@ -69,7 +72,10 @@ const Career = () => {
 										''
 									)}
 									{item.hasOwnProperty('degree') && item.degree !== null ? (
-										<span className="degree">{', ' + item.degree}</span>
+										<span className="degree">
+											<br />
+											{item.degree}
+										</span>
 									) : (
 										''
 									)}
@@ -80,8 +86,8 @@ const Career = () => {
 										</span>
 									)}
 								</h3>
-								<div>
-									<span className="date">{item.date}</span>
+								<div className="date">
+									<span className="year">{item.date}</span>
 									{item.hasOwnProperty('duration') && item.duration !== null ? (
 										<span className="duration">
 											<br />
