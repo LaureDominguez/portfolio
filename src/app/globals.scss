@@ -1,8 +1,12 @@
 @import './components/nav';
 @import './components/CirclesBackground';
-@import '_home.scss';
+@import './home';
 @import './pages/about/about';
 @import './pages/career/career';
+@import './pages/portfolio/portfolio';
+@import './pages/contact/contact';
+@import './pages/legal/legal';
+@import './components/footer';
 
 // Font Ubuntu
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
@@ -12,13 +16,14 @@
 
 :root{
     --deep-purple: #551A8B;
+    --deep-light-purple: #772AFA;
     --purple: #8C52FF;
     --light-purple: #8B73FF;
     --pastel-purple: #D9D7FF;
     --rose: #FB579E;
     --light-rose: #FDC2DC;
     --pastel-rose: #e7d7de;
-    --blue: #772AFA;
+    --blue: #738BFF;
 }
 
 h1, h2, h3{
@@ -46,6 +51,10 @@ main{
     min-height: 95vh;
     margin-left: 200px;
     z-index: 2;
+}
+
+.bold{
+    font-weight: bold;
 }
 
 .circles{

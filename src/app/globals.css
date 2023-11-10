@@ -244,11 +244,21 @@ body {
   box-shadow: 2px 5px 15px 5px rgba(0, 0, 0, 0.2705882353);
 }
 
-.about, .skills {
+.about {
   color: var(--deep-purple);
+  background-color: var(--blue);
+  padding: 1rem 2rem;
+  border-radius: 20px;
 }
-.about .bold, .skills .bold {
-  font-weight: bold;
+.about p, .about h4 {
+  line-height: 1.5rem;
+  margin: 0;
+}
+.about h4 {
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  margin-top: 1.5rem;
+  text-decoration: underline;
 }
 
 .container {
@@ -299,7 +309,7 @@ body {
 }
 
 .jobs {
-  color: var(--blue);
+  color: var(--deep-light-purple);
 }
 .jobs ul {
   background-color: var(--pastel-purple);
@@ -423,15 +433,83 @@ body {
   max-height: 1000px;
 }
 
+.portfolio {
+  z-index: 50;
+  width: 80%;
+  line-height: 1.5rem;
+}
+
+.contact {
+  margin: 0 auto;
+  padding-right: 200px;
+  z-index: 50;
+}
+.contact h1 {
+  text-align: center;
+  color: var(--pastel-purple);
+}
+.contact ul {
+  list-style: none;
+  background-color: rgba(217, 215, 255, 0.4901960784);
+  padding: 2rem 3rem;
+  border-radius: 20px;
+}
+.contact ul li:not(:has(a)), .contact ul a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  line-height: 1.5rem;
+  margin: 0.5rem;
+  padding: 1rem;
+  border-radius: 50px;
+  transition: all 0.5s ease;
+}
+.contact ul li a:hover {
+  box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+.contact ul, .contact a, .contact a:visited {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: var(--deep-purple);
+}
+.contact .contactIcon {
+  height: 2rem;
+  padding-right: 1rem;
+}
+
+.legal {
+  width: 80%;
+  margin: auto;
+}
+
+footer {
+  z-index: 50;
+  text-align: center;
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  font-size: 0.6rem;
+  letter-spacing: 1px;
+  line-height: 1rem;
+  color: var(--pastel-purple);
+  background-color: rgba(84, 26, 139, 0.4235294118);
+}
+footer a {
+  text-decoration: none;
+  color: var(--pastel-purple);
+}
+
 :root {
   --deep-purple: #551A8B;
+  --deep-light-purple: #772AFA;
   --purple: #8C52FF;
   --light-purple: #8B73FF;
   --pastel-purple: #D9D7FF;
   --rose: #FB579E;
   --light-rose: #FDC2DC;
   --pastel-rose: #e7d7de;
-  --blue: #772AFA;
+  --blue: #738BFF;
 }
 
 h1, h2, h3 {
@@ -459,6 +537,10 @@ main {
   min-height: 95vh;
   margin-left: 200px;
   z-index: 2;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 .circles {

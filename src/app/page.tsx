@@ -13,21 +13,27 @@ const Home = () => {
 					<p>
 						Je suis ravie de vous accueillir sur ma page de présentation.
 						<br />
-						Je suis passionnée par les nouvelles technologies et je suis à la
-						recherche d'une opportunité au sein d'une équipe dynamique.
+						Je suis passionnée par les nouvelles technologies, et je suis
+						<span className="bold"> à la recherche d'une opportunité</span> au
+						sein d'une équipe dynamique.
 						<br />
-						Vous trouverez ici un aperçu de mon profil, de mes compétences
-						techniques et de mes projets antérieurs.
+						Vous trouverez ici un aperçu de mon
+						<span className="bold"> profil</span>, de mes{' '}
+						<span className="bold">compétences </span>
+						et de mes <span className="bold">réallisations</span>.
 						<br />
 						Mon objectif est de collaborer avec une équipe expérimentée et
-						innovante pour continuer à développer mes compétences et contribuer
-						à des projets passionnants.
+						<span className="bold"> innovante</span>, pour continuer à
+						développer mes compétences et contribuer à des projets{' '}
+						<span className="bold"> passionnants</span>.
 						<br />
-						N'hésitez pas à explorer mon profil et à me contacter si vous
-						cherchez une personne motivée et passionnée pour rejoindre votre
-						équipe.
+						N'hésitez pas à explorer mon profil et à me contacter, si vous
+						cherchez une personne{' '}
+						<span className="bold">motivée et passionnée</span> pour rejoindre
+						votre équipe !
 						<br />
-						Je suis impatiente de relever de nouveaux défis avec vous !
+						Je suis impatiente de relever de{' '}
+						<span className="bold">nouveaux défis</span> avec vous !
 					</p>
 				</div>
 

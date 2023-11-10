@@ -8,8 +8,9 @@ import Circles from './components/CirclesBackground';
 // FontAwesome
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
-import { faTwitter, faFontAwesome } from '@fortawesome/free-brands-svg-icons';
-library.add(fas, faTwitter, faFontAwesome);
+import { faFontAwesome } from '@fortawesome/free-brands-svg-icons';
+import Footer from './components/Footer';
+library.add(fas, faFontAwesome);
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -25,6 +26,7 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
 				<Nav />
 				<Circles />
 				{children}
+				<Footer />
 			</body>
 		</html>
 	);
