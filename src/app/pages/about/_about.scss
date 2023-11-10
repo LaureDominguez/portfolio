@@ -1,3 +1,6 @@
-.about{
-    color: blue;
+.about, .skills{
+    color: var(--deep-purple);
+    .bold{
+        font-weight: bold;
+    }
 }

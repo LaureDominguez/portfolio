@@ -244,8 +244,11 @@ body {
   box-shadow: 2px 5px 15px 5px rgba(0, 0, 0, 0.2705882353);
 }
 
-.about {
-  color: blue;
+.about, .skills {
+  color: var(--deep-purple);
+}
+.about .bold, .skills .bold {
+  font-weight: bold;
 }
 
 .container {

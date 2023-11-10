@@ -1,11 +1,17 @@
 {
 	"langages": [
 		"HTML",
-		"CSS / SCSS",
+		"CSS",
+		"SCSS",
 		"JavaScript",
 		"TypeScript",
 		"PHP",
 		"SQL"
+	],
+	"langages2": [
+		"Python",
+		"C++",
+		"Java"
 	],
 	"frameworks": [
 		"React",
@@ -17,21 +23,21 @@
 		"Adobe Creative Cloud"
 	],
 	"softSkills": [
-		"Esprit d'équipe",
 		"Dynamique",
 		"Curieuse",
 		"Créative",
-		"Organisée"
+		"Organisée",
+		"Esprit d'équipe"
 	],
 	"hobies": [
-		"Veille numérique",
-		"Exploration vidéoludique",
-		"Horticulture d'intérieur",
-		"Création de produits fermentés"
+		"la Veille numérique",
+		"l'Exploration vidéoludique",
+		"l'Horticulture d'intérieur",
+		"la Création de produits fermentés"
 	],
 	"divers": {
 		"language" : "Anglais B2",
 		"licence" : "Permis B + véhicule",
-		"RQTH" : "RQTH sans aménagement de poste"
+		"RQTH" : "RQTH sans besoin d'aménagement de poste"
 	}
 }

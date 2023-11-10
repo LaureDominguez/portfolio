@@ -6,41 +6,95 @@ const About = () => {
 		<main>
 			<h1>à propos de moi :</h1>
 			<article className="about">
-				<h2>
-					{contactData.firstName} {contactData.lastName}
-				</h2>
-				<h3>{contactData.job}</h3>
-				<table>
-					<td>{contactData.age}</td>
-					<td>{skillsData.divers.language}</td>
-					<td>{skillsData.divers.licence}</td>
-					<td>{skillsData.divers.RQTH}</td>
-				</table>
+				<p>
+					Je m'appelle{' '}
+					<span className="bold">
+						{contactData.firstName} {contactData.lastName}
+					</span>
+					, je suis <span className="bold">{contactData.job}</span>, j'ai{' '}
+					<span className="bold">{contactData.age}</span>, un niveau d'
+					<span className="bold">{skillsData.divers.language}</span>, le{' '}
+					<span className="bold">{skillsData.divers.licence}</span>, et une{' '}
+					<span className="bold">{skillsData.divers.RQTH}</span>.
+				</p>
 			</article>
 			<article className="skills">
 				<div>
 					<h4>Langages</h4>
-					<ul>
+					<p>
+						J'ai une bonne maîtrise des languages
+						{skillsData.langages.map((skill, index, array) => (
+							<span
+								key={index}
+								className="bold"
+							>
+								{index === array.length - 1 ? ` et ${skill},` : ` ${skill},`}{' '}
+							</span>
+						))}
+						et j'ai des notions dans les languages
+						{skillsData.langages2.map((skill, index, array) => (
+							<span
+								key={index}
+								className="bold"
+							>
+								{index === array.length - 1 ? ` et ${skill}.` : ` ${skill},`}{' '}
+							</span>
+						))}
+					</p>
+					{/* <ul>
 						{skillsData.langages.map((skill, index) => (
 							<li key={index}>{skill}</li>
 						))}
-					</ul>
+					</ul> */}
 				</div>
 				<div>
 					<h4>Frameworks</h4>
-					<ul>
+					<p>
+						J'ai appris à travailler avec les environnements
+						{skillsData.frameworks.map((skill, index, array) => (
+							<span
+								key={index}
+								className="bold"
+							>
+								{index === array.length - 1 ? ` et ${skill}.` : ` ${skill},`}{' '}
+							</span>
+						))}
+					</p>
+					{/* <ul>
 						{skillsData.frameworks.map((skill, index) => (
 							<li key={index}>{skill}</li>
 						))}
-					</ul>
+					</ul> */}
 				</div>
 				<div>
 					<h4>Soft Skills</h4>
-					<ul>
-						{skillsData.softSkills.map((skill, index) => (
-							<li key={index}>{skill}</li>
+					<p>
+						On dit de moi que je suis
+						{skillsData.softSkills.map((skill, index, array) => (
+							<span
+								key={index}
+								className="bold"
+							>
+								{index === array.length - 1
+									? ` et que j'ai l'${skill}.`
+									: ` ${skill},`}{' '}
+							</span>
 						))}
-					</ul>
+					</p>
+				</div>
+				<div>
+					<h4>Hobies</h4>
+					<p>
+						J'aime
+						{skillsData.hobies.map((skill, index, array) => (
+							<span
+								key={index}
+								className="bold"
+							>
+								{index === array.length - 1 ? ` et ${skill}.` : ` ${skill},`}{' '}
+							</span>
+						))}
+					</p>
 				</div>
 			</article>
 		</main>
