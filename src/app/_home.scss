@@ -1,6 +1,26 @@
 .homeTitle{
+    position: relative;
     margin: 0 auto;
     text-align: center;
+    h1{
+        position: absolute;
+        margin: 0;
+        top: -5rem;
+        right: 0;
+        width: 80rem;
+        font-size: 5rem;
+        text-align: end;
+        color: var(--light-rose);
+        z-index: 5;
+    }
+    h2{
+        margin: 0;
+        top: 0;
+        font-size: 2rem;
+        position: relative;
+        color: var(--pastel-rose);
+        z-index: 50;
+    }
 }
 
 .home{
@@ -30,7 +50,7 @@
             border-bottom: 30px solid transparent;
             border-left: 50px solid var(--purple);
             top: 70%; 
-            left: calc(70% + 4rem);
+            left: calc(70% + 50px);
         }
     }
     .homeImg{

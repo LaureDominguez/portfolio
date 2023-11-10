@@ -58,7 +58,11 @@
     }
 
 .jobs{
-    color: var(--blue)
+    color: var(--blue);
+    ul{
+        background-color: var(--pastel-purple);
+        border-radius: 5px;
+    } 
 }
 
 .title{
@@ -72,9 +76,13 @@
 
 .educ{
     color: var(--rose);
+    ul{
+        background-color: var(--pastel-rose);
+        border-radius: 5px;
+    } 
     .degree, .school{
         font-size: smaller;
-        color: var(--purple);
+        color: var(--blue);
     }
 }
 

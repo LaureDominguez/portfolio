@@ -4,17 +4,36 @@
 @import './pages/about/about';
 @import './pages/career/career';
 
+// Font Ubuntu
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+// Font Righteous
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+
+
+
+// @font-face {
+//     font-family: 'bellotabold';
+//     src: url('./public/bellota_bold_macroman/Bellota-Bold-webfont.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
 :root{
     --deep-purple: #551A8B;
     --purple: #8C52FF;
     --light-purple: #8B73FF;
     --pastel-purple: #D9D7FF;
-    --rose: #f92a82;
-    --blue: #4A26FF;
+    --rose: #FB579E;
+    --light-rose: #FDC2DC;
+    --pastel-rose: #e7d7de;
+    --blue: #772AFA;
 }
 
 h1, h2, h3{
     color: var(--deep-purple);
+    font-family: 'Righteous', sans-serif;
+    font-weight: 400;
     &::first-letter{
         text-transform: capitalize;
     }
@@ -22,7 +41,7 @@ h1, h2, h3{
 
 *{
     box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     &:not(a, .navIcon, .navTitle){
         cursor:default;
     }

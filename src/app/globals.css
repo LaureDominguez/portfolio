@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
 .sideNav {
   position: fixed;
   top: 50%;
@@ -182,8 +184,28 @@ body {
   }
 }
 .homeTitle {
+  position: relative;
   margin: 0 auto;
   text-align: center;
+}
+.homeTitle h1 {
+  position: absolute;
+  margin: 0;
+  top: -5rem;
+  right: 0;
+  width: 80rem;
+  font-size: 5rem;
+  text-align: end;
+  color: var(--light-rose);
+  z-index: 5;
+}
+.homeTitle h2 {
+  margin: 0;
+  top: 0;
+  font-size: 2rem;
+  position: relative;
+  color: var(--pastel-rose);
+  z-index: 50;
 }
 
 .home {
@@ -215,7 +237,7 @@ body {
   border-bottom: 30px solid transparent;
   border-left: 50px solid var(--purple);
   top: 70%;
-  left: calc(70% + 4rem);
+  left: calc(70% + 50px);
 }
 .home .homeImg {
   border-radius: 30px;
@@ -276,6 +298,10 @@ body {
 .jobs {
   color: var(--blue);
 }
+.jobs ul {
+  background-color: var(--pastel-purple);
+  border-radius: 5px;
+}
 
 .title {
   font-size: 1.3rem;
@@ -289,9 +315,13 @@ body {
 .educ {
   color: var(--rose);
 }
+.educ ul {
+  background-color: var(--pastel-rose);
+  border-radius: 5px;
+}
 .educ .degree, .educ .school {
   font-size: smaller;
-  color: var(--purple);
+  color: var(--blue);
 }
 
 .school, .company {
@@ -395,12 +425,16 @@ body {
   --purple: #8C52FF;
   --light-purple: #8B73FF;
   --pastel-purple: #D9D7FF;
-  --rose: #f92a82;
-  --blue: #4A26FF;
+  --rose: #FB579E;
+  --light-rose: #FDC2DC;
+  --pastel-rose: #e7d7de;
+  --blue: #772AFA;
 }
 
 h1, h2, h3 {
   color: var(--deep-purple);
+  font-family: "Righteous", sans-serif;
+  font-weight: 400;
 }
 h1::first-letter, h2::first-letter, h3::first-letter {
   text-transform: capitalize;
@@ -408,7 +442,7 @@ h1::first-letter, h2::first-letter, h3::first-letter {
 
 * {
   box-sizing: border-box;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
 *:not(a, .navIcon, .navTitle) {
   cursor: default;
