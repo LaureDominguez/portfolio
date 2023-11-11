@@ -10,16 +10,18 @@
         width: 80rem;
         font-size: 5rem;
         text-align: end;
-        color: var(--light-rose);
+        color: var(--rose);
         z-index: 5;
+        text-shadow: 0 0 5px var(--deep-purple);
     }
     h2{
         margin: 0;
         top: 0;
         font-size: 2rem;
         position: relative;
-        color: var(--pastel-rose);
-        z-index: 50;
+        color: var(--aqua-blue);
+        z-index: 10;
+        text-shadow: 0 0 5px var(--deep-purple);
     }
 }
 

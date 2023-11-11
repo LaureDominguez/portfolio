@@ -1,5 +1,6 @@
 @import './components/nav';
 @import './components/CirclesBackground';
+@import './components/GlowingEffect';
 @import './home';
 @import './pages/about/about';
 @import './pages/career/career';
@@ -24,6 +25,7 @@
     --light-rose: #FDC2DC;
     --pastel-rose: #e7d7de;
     --blue: #738BFF;
+    --aqua-blue: #73FFFA;
 }
 
 h1, h2, h3{
@@ -42,6 +44,11 @@ h1, h2, h3{
         cursor:default;
     }
 }
+
+a, a:active, a:visited, a :-webkit-any(link){
+        text-decoration: none;
+        color: inherit;
+    }
 
 main{
     display: flex;

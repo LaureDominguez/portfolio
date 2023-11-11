@@ -8,18 +8,30 @@ const Portfolio = () => {
 				<h1>Mes réalisations :</h1>
 
 				<p>
-					Dans le cadre de ma formation en développement web, j'ai été chargée
-					de concevoir un site web en utilisant exclusivement PHP, SQL et
-					JavaScript.
+					Dans le cadre de ma formation en développement web, il m'a été demandé
+					de concevoir un site web en utilisant exclusivement{' '}
+					<span className="bold">PHP</span>, <span className="bold">SQL</span>{' '}
+					et <span className="bold">JavaScript</span>.
 					<br />
-					Les exigences du projet comprenaient la mise en place d'un système de
-					gestion et d'authentification des utilisateurs, la création d'une base
-					de données interactive comportant plusieurs tables interconnectées,
-					ainsi que la réalisation d'un affichage dynamique.
+					Les exigences du projet comprenaient la mise en place d'un{' '}
+					<span className="bold">
+						système de gestion et d'authentification des utilisateurs
+					</span>
+					, la création d'une{' '}
+					<span className="bold">base de données relationnelle</span> comportant{' '}
+					<span className="bold">plusieures tables interconnectées</span>, et
+					différentes opérations
+					<span className="bold">CRUD</span> personnalisées, ainsi que la
+					réalisation d'un affichage dynamique en{' '}
+					<span className="bold">fetch</span>.
 					<br />
 					Il est important de souligner que cette réalisation a été accomplie
-					sans l'utilisation de frameworks ou de bibliothèques de style
-					externes.
+					<span className="bold">
+						{' '}
+						sans l'utilisation de frameworks ou de bibliothèques de style
+						externes
+					</span>
+					.
 					<br />
 					Vous pouvez découvrir le résultat final en visitant le lien vers mon
 					site web :

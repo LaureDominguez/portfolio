@@ -11,11 +11,11 @@ const Home = () => {
 				<div>
 					<h3>Bonjour et bienvenue sur mon site !</h3>
 					<p>
-						Je suis ravie de vous accueillir sur ma page de présentation.
+						Je suis ravie de vous accueillir sur ma page de présentation !
 						<br />
 						Je suis passionnée par les nouvelles technologies, et je suis
 						<span className="bold"> à la recherche d'une opportunité</span> au
-						sein d'une équipe dynamique.
+						sein d'une équipe <span className="bold">dynamique</span>.
 						<br />
 						Vous trouverez ici un aperçu de mon
 						<span className="bold"> profil</span>, de mes{' '}
@@ -27,10 +27,10 @@ const Home = () => {
 						développer mes compétences et contribuer à des projets{' '}
 						<span className="bold"> passionnants</span>.
 						<br />
-						N'hésitez pas à explorer mon profil et à me contacter, si vous
-						cherchez une personne{' '}
-						<span className="bold">motivée et passionnée</span> pour rejoindre
-						votre équipe !
+						N'hésitez pas à explorer mon profil et à me{' '}
+						<span className="bold">contacter</span>, si vous cherchez une
+						personne <span className="bold">motivée et passionnée</span> pour
+						rejoindre votre équipe !
 						<br />
 						Je suis impatiente de relever de{' '}
 						<span className="bold">nouveaux défis</span> avec vous !
@@ -46,6 +46,9 @@ const Home = () => {
 					priority
 				/>
 			</div>
+			{/* <div>
+				Téléchargez mon CV !
+			</div> */}
 		</main>
 	);
 };

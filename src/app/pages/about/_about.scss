@@ -1,16 +1,35 @@
+// @import '/src/app/components/GlowingEffect';
+
+.aboutTitle{
+        color: var(--aqua-blue);
+        text-shadow: 0 0 5px var(--deep-purple);
+
+    }
 .about{
     color: var(--deep-purple);
-    background-color: var(--blue);
-    padding: 1rem 2rem;
+    background-color: #73fffa8f;
+    padding: 2rem;
     border-radius: 20px;
     p, h4{
         line-height: 1.5rem;
         margin: 0;
+    }
+    ul{
+        margin: 0;
+        padding-left: 1.2rem;
+        li{
+            line-height: 1.5rem;
+        }
     }
     h4{
         font-size: 1.1rem;
         letter-spacing: 1px;
         margin-top: 1.5rem;
         text-decoration: underline;
+        color: var(--deep-light-purple);
     }
+}
+.aboutContainer{
+    margin: auto;
+    z-index: 50;
 }

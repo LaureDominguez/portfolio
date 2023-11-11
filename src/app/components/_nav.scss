@@ -27,13 +27,11 @@
 			flex-direction: column;
 			justify-content: space-evenly;
 			li {
-				// margin: 1rem;
 				a {
 					display: flex;
 					align-items: center;
 					height: 3rem;
                     width: 150px;
-					text-decoration: none;
 					font-weight: bold;
 					.navTitle {
 						transition: all 0.3s ease-in;
@@ -48,11 +46,6 @@
 						width: 190px;
                         box-shadow: 16px 10px 15px -3px rgba(0,0,0,0.1);
 						transition: width 0.3s ease-in;
-						// &::before{
-						//     content: "";
-						//     border: 5px solid red;
-						//     border-radius: 100px;
-						// }
 					}
 					&:hover > .navTitle {
 						color: var(--deep-purple);

@@ -36,7 +36,6 @@
   align-items: center;
   height: 3rem;
   width: 150px;
-  text-decoration: none;
   font-weight: bold;
 }
 .sideNav .round-container ul li a .navTitle {
@@ -183,6 +182,67 @@ body {
     border-radius: 50%;
   }
 }
+.glowing {
+  border: none;
+  padding: 0 0.2rem;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.glowing:before {
+  content: "";
+  background: linear-gradient(45deg, #551A8B, #8C52FF, #D9D7FF, #FB579E, #FDC2DC, #e7d7de, #73FFFA, #738BFF, #772AFA);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glowing:hover {
+  color: #fff;
+}
+
+.glowing:active:after {
+  background: transparent;
+}
+
+.glowing:hover:before {
+  opacity: 1;
+}
+
+.glowing:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
 .homeTitle {
   position: relative;
   margin: 0 auto;
@@ -196,16 +256,18 @@ body {
   width: 80rem;
   font-size: 5rem;
   text-align: end;
-  color: var(--light-rose);
+  color: var(--rose);
   z-index: 5;
+  text-shadow: 0 0 5px var(--deep-purple);
 }
 .homeTitle h2 {
   margin: 0;
   top: 0;
   font-size: 2rem;
   position: relative;
-  color: var(--pastel-rose);
-  z-index: 50;
+  color: var(--aqua-blue);
+  z-index: 10;
+  text-shadow: 0 0 5px var(--deep-purple);
 }
 
 .home {
@@ -244,21 +306,39 @@ body {
   box-shadow: 2px 5px 15px 5px rgba(0, 0, 0, 0.2705882353);
 }
 
+.aboutTitle {
+  color: var(--aqua-blue);
+  text-shadow: 0 0 5px var(--deep-purple);
+}
+
 .about {
   color: var(--deep-purple);
-  background-color: var(--blue);
-  padding: 1rem 2rem;
+  background-color: rgba(115, 255, 250, 0.5607843137);
+  padding: 2rem;
   border-radius: 20px;
 }
 .about p, .about h4 {
   line-height: 1.5rem;
   margin: 0;
 }
+.about ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+.about ul li {
+  line-height: 1.5rem;
+}
 .about h4 {
   font-size: 1.1rem;
   letter-spacing: 1px;
   margin-top: 1.5rem;
   text-decoration: underline;
+  color: var(--deep-light-purple);
+}
+
+.aboutContainer {
+  margin: auto;
+  z-index: 50;
 }
 
 .container {
@@ -289,7 +369,7 @@ body {
 }
 
 .timeline article:hover {
-  box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 5px 5px 15px 5px #D9D7FF, -9px 5px 15px 5px #8C52FF, -7px -5px 15px 8px #73FFFA, 12px -5px 15px 5px #FB579E, 12px 10px 15px 7px #FDC2DC, -10px 10px 15px 7px #551A8B, -10px -7px 27px 12px #738BFF, 5px 5px 15px 5px rgba(0, 0, 0, 0);
 }
 
 .timelineIcon {
@@ -437,6 +517,11 @@ body {
   z-index: 50;
   width: 80%;
   line-height: 1.5rem;
+  margin: auto;
+  text-align: right;
+}
+.portfolio p {
+  text-wrap: balance;
 }
 
 .contact {
@@ -467,7 +552,10 @@ body {
 .contact ul li a:hover {
   box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 5px 5px 15px 5px rgba(0, 0, 0, 0);
 }
-.contact ul, .contact a, .contact a:visited {
+.contact ul li:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.contact ul, .contact a, .contact :active, .contact a:visited {
   font-size: 1.2rem;
   text-decoration: none;
   color: var(--deep-purple);
@@ -496,7 +584,6 @@ footer {
   background-color: rgba(84, 26, 139, 0.4235294118);
 }
 footer a {
-  text-decoration: none;
   color: var(--pastel-purple);
 }
 
@@ -510,6 +597,7 @@ footer a {
   --light-rose: #FDC2DC;
   --pastel-rose: #e7d7de;
   --blue: #738BFF;
+  --aqua-blue: #73FFFA;
 }
 
 h1, h2, h3 {
@@ -527,6 +615,11 @@ h1::first-letter, h2::first-letter, h3::first-letter {
 }
 *:not(a, .navIcon, .navTitle) {
   cursor: default;
+}
+
+a, a:active, a:visited, a :-webkit-any(link) {
+  text-decoration: none;
+  color: inherit;
 }
 
 main {
