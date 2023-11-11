@@ -33,3 +33,21 @@
     margin: auto;
     z-index: 50;
 }
+
+
+/******************* Media query *******************/
+/* Smatrphone en landscape */
+@media screen and (max-width: 767px) and (orientation: landscape) {
+}
+
+/* Tablettes */
+@media (min-width: 768px) and (max-width: 1023px) {
+}
+
+/* Tablettes en landscape */
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
+}
+
+/* PC */
+@media (min-width: 1024px) {
+}

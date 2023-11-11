@@ -50,16 +50,6 @@ a, a:active, a:visited, a :-webkit-any(link){
         color: inherit;
     }
 
-main{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 95vh;
-    margin-left: 200px;
-    z-index: 5;
-}
-
 .bold{
     font-weight: bold;
 }
@@ -70,4 +60,30 @@ main{
 
 nav{
     z-index: 10;
+}
+
+/******************* Media query *******************/
+/* Smatrphone en landscape */
+@media screen and (max-width: 767px) and (orientation: landscape) {
+}
+
+/* Tablettes */
+@media (min-width: 768px) and (max-width: 1023px) {
+}
+
+/* Tablettes en landscape */
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
+}
+
+/* PC */
+@media (min-width: 1024px) {
+        main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 95vh;
+        margin-left: 200px;
+        z-index: 5;
+    }
 }

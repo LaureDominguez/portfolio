@@ -1,76 +1,147 @@
 .homeTitle{
-    position: relative;
-    margin: 0 auto;
-    text-align: center;
-    h1{
-        position: absolute;
-        margin: 0;
-        top: -5rem;
-        right: 0;
-        width: 80rem;
-        font-size: 5rem;
-        text-align: end;
-        color: var(--rose);
-        z-index: 10;
-        text-shadow: 0 0 5px var(--deep-purple);
+            text-align: end;
+        h1{
+            font-size: 3rem;
+            color: var(--rose);
+            text-shadow: 0 0 5px var(--deep-purple);
+        }
+        h2{
+            font-size: 1.5rem;
+            color: var(--aqua-blue);
+            text-shadow: 0 0 5px var(--deep-purple);
+        }
     }
-    h2{
-        margin: 0;
-        top: 0;
-        font-size: 2rem;
-        position: relative;
-        color: var(--aqua-blue);
-        z-index: 20;
-        text-shadow: 0 0 5px var(--deep-purple);
+
+    .home{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        color: var(--pastel-purple);
+        z-index: 15;
+        .homeImg{
+            border-radius: 30px;
+            box-shadow: 2px 5px 15px 5px #00000045;
+        }
+        div{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 95%;
+            margin-top: 2rem;
+            padding: 1rem 2rem;
+            line-height: 2rem;
+            border-radius: 25px;
+            background-color: var(--purple);
+            box-shadow: 2px 5px 15px 5px #00000045;
+            text-wrap: pretty;
+            h3{
+                text-align: center;
+            }
+            p{
+                text-align: justify;
+            }
+            &::after{
+                content: '';
+                position: absolute;
+                border-left: 25px solid transparent;
+                border-bottom: 30px solid var(--purple);
+                top: -30px;
+                left: calc(20% + 50px);
+            }
+            .download{
+                text-align: center;
+                text-wrap: nowrap;
+                padding: 1rem;
+                color: var(--purple);
+                background-color: var(--pastel-purple);
+            }
+
+        }
+    }
+
+
+/******************* Media query *******************/
+/* Smatrphone en landscape */
+@media screen and (max-width: 767px) and (orientation: landscape) {
+}
+
+/* Tablettes */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .homeTitle{
+        margin: 0 auto;
+        text-align: center;
+        h1{
+            font-size: 4rem;
+        }
+        h2{
+            font-size: 2rem;
+        }
+    }
+
+    .home{
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-around;
+        margin: 0 auto;
+        h3{
+            font-size: 1.5rem;
+            color: var(--pastel-purple);
+        }
+        div{
+            width: 70%;
+            margin-top: 0rem;
+            &::after{
+                border-bottom: 20px solid transparent;
+                border-left: 30px solid var(--purple);
+                top: 20%; 
+                left: calc(95% + 30px);
+            }            
+            .download{
+                margin: 1rem;
+            }
+        }
     }
 }
 
-.home{
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin: 0 auto;
-    color: var(--pastel-purple);
-    z-index: 15;
-    h3{
-        font-size: 1.5rem;
-        color: var(--pastel-purple);
-    }
-    div{
-        width: 70%;
-        padding: 1rem 2rem;
-        line-height: 2rem;
-        border-radius: 50px;
-        background-color: var(--purple);
-        box-shadow: 2px 5px 15px 5px #00000045;
-        text-align: center;
-        &::after{
-            content: '';
+/* PC */
+@media (min-width: 1024px) {
+    .homeTitle{
+        position: relative;
+        h1{
             position: absolute;
-            border-top: 0 solid transparent;
-            border-bottom: 30px solid transparent;
-            border-left: 50px solid var(--purple);
-            top: 70%; 
-            left: calc(70% + 50px);
+            margin: 0;
+            top: -5rem;
+            right: 0;
+            width: 80rem;
+            font-size: 5rem;
+            text-align: end;
+            z-index: 10;
         }
-        h3{
-            text-align: start;
-        }
-        p{
-            text-align: justify;
-        }
-        
-        .download{
-            margin: 2rem !important;
-            text-align: center;
-            padding: 1rem;
-            color: var(--purple) !important;
-            background-color: var(--pastel-purple);
+        h2{
+            margin: 0;
+            top: 0;
+            font-size: 2rem;
+            position: relative;
+            z-index: 20;
         }
     }
-    .homeImg{
-        border-radius: 30px;
-        box-shadow: 2px 5px 15px 5px #00000045;
+
+    .home{
+        flex-direction: row;
+        justify-content: space-around;
+        div{
+            width: 70%;
+            border-radius: 50px;
+            p:not(:last-of-type){
+                align-self: flex-start;
+            }
+            &::after{
+                border-bottom: 30px solid transparent;
+                border-left: 50px solid var(--purple);
+                top: 60%; 
+                left: calc(95% + 50px);
+            }
+        }
     }
 }
