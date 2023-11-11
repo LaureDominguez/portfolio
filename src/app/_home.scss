@@ -11,7 +11,7 @@
         font-size: 5rem;
         text-align: end;
         color: var(--rose);
-        z-index: 5;
+        z-index: 10;
         text-shadow: 0 0 5px var(--deep-purple);
     }
     h2{
@@ -20,7 +20,7 @@
         font-size: 2rem;
         position: relative;
         color: var(--aqua-blue);
-        z-index: 10;
+        z-index: 20;
         text-shadow: 0 0 5px var(--deep-purple);
     }
 }
@@ -32,7 +32,7 @@
     justify-content: space-around;
     margin: 0 auto;
     color: var(--pastel-purple);
-    z-index: 10;
+    z-index: 15;
     h3{
         font-size: 1.5rem;
         color: var(--pastel-purple);

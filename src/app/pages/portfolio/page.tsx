@@ -1,4 +1,5 @@
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
 
 const Portfolio = () => {
 
@@ -8,8 +9,9 @@ const Portfolio = () => {
 				<h1>Mes réalisations :</h1>
 
 				<p>
-					Dans le cadre de ma formation en développement web, il m'a été demandé
-					de concevoir un site web en utilisant exclusivement{' '}
+					Dans le cadre de ma formation en{' '}
+					<span className="bold">développement web</span>, il m'a été demandé de
+					concevoir un site web en utilisant exclusivement{' '}
 					<span className="bold">PHP</span>, <span className="bold">SQL</span>{' '}
 					et <span className="bold">JavaScript</span>.
 					<br />
@@ -20,14 +22,12 @@ const Portfolio = () => {
 					, la création d'une{' '}
 					<span className="bold">base de données relationnelle</span> comportant{' '}
 					<span className="bold">plusieures tables interconnectées</span>, et
-					différentes opérations
-					<span className="bold">CRUD</span> personnalisées, ainsi que la
-					réalisation d'un affichage dynamique en{' '}
+					différentes opérations <span className="bold">CRUD</span>{' '}
+					personnalisées, ainsi que la réalisation d'un affichage dynamique en{' '}
 					<span className="bold">fetch</span>.
 					<br />
-					Il est important de souligner que cette réalisation a été accomplie
+					Il est important de souligner que cette réalisation a été accomplie{' '}
 					<span className="bold">
-						{' '}
 						sans l'utilisation de frameworks ou de bibliothèques de style
 						externes
 					</span>
@@ -35,15 +35,22 @@ const Portfolio = () => {
 					<br />
 					Vous pouvez découvrir le résultat final en visitant le lien vers mon
 					site web :
-					<br />
-					<Link
-						href={'http://www.laure-web.fr'}
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						Les Pâtes du Chat
-					</Link>
 				</p>
+				<Link
+					href={'http://www.laure-web.fr'}
+					target="_blank"
+					rel="noopener noreferrer"
+					className="glowing"
+				>
+					<Image
+						src="/Logo_chat.png"
+						alt='Logo de la société "Les Pâtes du Chat'
+						className="logoImg"
+						width={193}
+						height={28}
+						priority
+					/>
+				</Link>
 			</div>
 		</main>
 	);

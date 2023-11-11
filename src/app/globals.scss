@@ -57,7 +57,7 @@ main{
     align-items: center;
     min-height: 95vh;
     margin-left: 200px;
-    z-index: 2;
+    z-index: 5;
 }
 
 .bold{
@@ -69,5 +69,5 @@ main{
 }
 
 nav{
-    z-index: 3;
+    z-index: 10;
 }

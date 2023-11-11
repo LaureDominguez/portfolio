@@ -41,7 +41,7 @@
 }
 
 .timelineIcon{
-    height: 2rem;
+    height: 2rem !important;
     width: 2rem;
 }
 
@@ -98,7 +98,7 @@
     width: 80%;
     margin: 0 auto;
     padding: 2rem 0;
-    z-index: 10;
+    z-index: 15;
 }
 .timeline:after {
     content: "";
@@ -109,7 +109,7 @@
     width: 8px;
     background: var(--light-purple);
     border-radius: 3px;
-    z-index: 1;
+    z-index: 10;
 }
 
 .timeline article {
@@ -134,7 +134,7 @@
     height: 24px;
     border: 6px var(--light-purple) solid;
     border-radius: 50%;
-    z-index: 2;
+    z-index: 20;
 }
 .timeline article:after {
     content: "";

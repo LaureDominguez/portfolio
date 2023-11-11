@@ -3,9 +3,25 @@
     width: 80%;
     line-height: 1.5rem;
     margin: auto;
+    padding: 1rem 2rem;
     text-align: right;
+    border-radius: 10px;
+    background-color: var(--light-rose);
 
+    h1{
+        color: var(--purple);
+    }
     p{
         text-wrap: balance;
+        color: var(--deep-purple);
+        line-height: 1.5rem;
     }
+    a{
+        padding-top: 1rem;
+    }
+
+    .logoImg{
+        cursor: pointer;
+    }
+
 }
