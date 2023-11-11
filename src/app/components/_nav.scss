@@ -33,12 +33,12 @@
 					height: 3rem;
                     width: 150px;
 					font-weight: bold;
-					.navTitle {
+					.navTitle:not(.activNav > .navTitle, a:hover > .navTitle) {
 						transition: all 0.3s ease-in;
 						z-index: 5000;
 						color: transparent;
 					}
-					&:hover {
+					&:hover{
 						color: var(--deep-purple);
 						background: linear-gradient(90deg, rgba(255,255,255,1) 20%, rgba(0,0,0,0) 100%);
 						border-radius: 100px;
@@ -47,7 +47,7 @@
                         box-shadow: 16px 10px 15px -3px rgba(0,0,0,0.1);
 						transition: width 0.3s ease-in;
 					}
-					&:hover > .navTitle {
+					&:hover > .navTitle{
 						color: var(--deep-purple);
 						transform: translateX(30px);
 					}
@@ -55,10 +55,12 @@
 						color: var(--deep-purple);
 					}
 				}
-				.navIcon {
+				.navIcon{
 					height: 1.8rem;
-					color: var(--pastel-purple);
 					padding-left: 1rem;
+					&:not(.activNav > .navIcon, a:hover > .navIcon) {
+						color: var(--pastel-purple);
+					}
 				}
 				&:nth-child(2),
 				&:nth-child(4) {
@@ -69,5 +71,21 @@
 				}
 			}
 		}
+	}
+	.activNav {
+		color: var(--deep-purple);
+		background: linear-gradient(90deg, rgba(255,255,255,1) 20%, rgba(0,0,0,0) 100%);
+		border-radius: 100px;
+		height: 3rem;
+		width: 190px;
+		box-shadow: 16px 10px 15px -3px rgba(0,0,0,0.1);
+		
+	}
+	.activNav > .navTitle {
+		color: var(--deep-purple);
+		transform: translateX(30px);
+	}
+	.activNav > .navIcon {
+		color: var(--deep-purple);
 	}
 }

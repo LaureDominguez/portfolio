@@ -35,6 +35,14 @@ const Home = () => {
 						Je suis impatiente de relever de{' '}
 						<span className="bold">nouveaux défis</span> avec vous !
 					</p>
+
+					<a
+						href={'/CV_Laure_DOMINGUEZ_DevWeb_Fullstack.pdf'}
+						download={'CV_Laure_DOMINGUEZ_DevWeb_Fullstack.pdf'}
+						className="download glowing bold"
+					>
+						Téléchargez mon CV en pdf !
+					</a>
 				</div>
 
 				<Image
@@ -46,9 +54,6 @@ const Home = () => {
 					priority
 				/>
 			</div>
-			{/* <div>
-				Téléchargez mon CV !
-			</div> */}
 		</main>
 	);
 };

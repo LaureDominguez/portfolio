@@ -40,11 +40,11 @@
     div{
         width: 70%;
         padding: 1rem 2rem;
-        text-align: justify;
         line-height: 2rem;
         border-radius: 50px;
         background-color: var(--purple);
         box-shadow: 2px 5px 15px 5px #00000045;
+        text-align: center;
         &::after{
             content: '';
             position: absolute;
@@ -53,6 +53,20 @@
             border-left: 50px solid var(--purple);
             top: 70%; 
             left: calc(70% + 50px);
+        }
+        h3{
+            text-align: start;
+        }
+        p{
+            text-align: justify;
+        }
+        
+        .download{
+            margin: 2rem !important;
+            text-align: center;
+            padding: 1rem;
+            color: var(--purple) !important;
+            background-color: var(--pastel-purple);
         }
     }
     .homeImg{

@@ -38,7 +38,7 @@
   width: 150px;
   font-weight: bold;
 }
-.sideNav .round-container ul li a .navTitle {
+.sideNav .round-container ul li a .navTitle:not(.activNav > .navTitle, a:hover > .navTitle) {
   transition: all 0.3s ease-in;
   z-index: 5000;
   color: transparent;
@@ -61,14 +61,31 @@
 }
 .sideNav .round-container ul li .navIcon {
   height: 1.8rem;
-  color: var(--pastel-purple);
   padding-left: 1rem;
+}
+.sideNav .round-container ul li .navIcon:not(.activNav > .navIcon, a:hover > .navIcon) {
+  color: var(--pastel-purple);
 }
 .sideNav .round-container ul li:nth-child(2), .sideNav .round-container ul li:nth-child(4) {
   margin-left: 20px;
 }
 .sideNav .round-container ul li:nth-child(3) {
   margin-left: 30px;
+}
+.sideNav .activNav {
+  color: var(--deep-purple);
+  background: linear-gradient(90deg, rgb(255, 255, 255) 20%, rgba(0, 0, 0, 0) 100%);
+  border-radius: 100px;
+  height: 3rem;
+  width: 190px;
+  box-shadow: 16px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+.sideNav .activNav > .navTitle {
+  color: var(--deep-purple);
+  transform: translateX(30px);
+}
+.sideNav .activNav > .navIcon {
+  color: var(--deep-purple);
 }
 
 body {
@@ -286,11 +303,11 @@ body {
 .home div {
   width: 70%;
   padding: 1rem 2rem;
-  text-align: justify;
   line-height: 2rem;
   border-radius: 50px;
   background-color: var(--purple);
   box-shadow: 2px 5px 15px 5px rgba(0, 0, 0, 0.2705882353);
+  text-align: center;
 }
 .home div::after {
   content: "";
@@ -300,6 +317,19 @@ body {
   border-left: 50px solid var(--purple);
   top: 70%;
   left: calc(70% + 50px);
+}
+.home div h3 {
+  text-align: start;
+}
+.home div p {
+  text-align: justify;
+}
+.home div .download {
+  margin: 2rem !important;
+  text-align: center;
+  padding: 1rem;
+  color: var(--purple) !important;
+  background-color: var(--pastel-purple);
 }
 .home .homeImg {
   border-radius: 30px;
@@ -626,7 +656,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   min-height: 95vh;
   margin-left: 200px;
   z-index: 2;

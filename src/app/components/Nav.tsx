@@ -1,6 +1,16 @@
+'use client'
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
+import '@fortawesome/fontawesome-svg-core/styles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+	faHouse,
+	faCircleUser,
+	faBriefcase,
+	faLaptopCode,
+	faEnvelope,
+} from '@fortawesome/free-solid-svg-icons';
+
 
 const NavItem = ({
 	href,
@@ -10,31 +20,38 @@ const NavItem = ({
 	href: string;
 	icon: any;
 	title: string;
-}) => (
-	<li>
-		<Link href={href}>
-			<FontAwesomeIcon
-				icon={icon}
-				className="navIcon"
-			/>
-			<span className="navTitle">{title}</span>
-		</Link>
-	</li>
-);
+	}) => {
+
+
+	const pathName = usePathname();
+	const isActive = pathName === href;
+	return (
+		<li>
+			<Link
+				href={href}
+				className={isActive ? 'activNav' : ''}
+			>
+				<FontAwesomeIcon
+					icon={icon}
+					className="navIcon"
+				/>
+				<span className="navTitle">{title}</span>
+			</Link>
+		</li>
+	);
+};
 
 const Nav = () => {
-	const router = useRouter;
-
 	const navItems = [
-		{ href: '/', icon: 'fa-solid fa-house', title: 'Home' },
-		{ href: '/pages/about', icon: 'fa-solid fa-circle-user', title: 'About' },
-		{ href: '/pages/career', icon: 'fa-solid fa-briefcase', title: 'Career' },
+		{ href: '/', icon: faHouse, title: 'Home' },
+		{ href: '/pages/about', icon: faCircleUser, title: 'About' },
+		{ href: '/pages/career', icon: faBriefcase, title: 'Career' },
 		{
 			href: '/pages/portfolio',
-			icon: 'fa-solid fa-laptop-code',
+			icon: faLaptopCode,
 			title: 'Portfolio',
 		},
-		{ href: '/pages/contact', icon: 'fa-solid fa-envelope', title: 'Contact' },
+		{ href: '/pages/contact', icon: faEnvelope, title: 'Contact' },
 	];
 
 	return (
