@@ -13,8 +13,11 @@ const Home = () => {
 					<p>Je suis ravie de vous accueillir sur ma page de présentation !</p>
 					<p>
 						Je suis passionnée par les nouvelles technologies, et je suis
-						<span className="bold"> à la recherche d'une opportunité</span> au
-						sein d'une équipe <span className="bold">dynamique</span>.
+						<span className="bold">
+							{' '}
+							à la recherche d&apos;une opportunité
+						</span>{' '}
+						au sein d&apos;une équipe <span className="bold">dynamique</span>.
 						<br />
 						Vous trouverez ici un aperçu de mon
 						<span className="bold"> profil</span>, de mes{' '}
@@ -28,7 +31,7 @@ const Home = () => {
 						<span className="bold"> passionnants</span>.
 					</p>
 					<p>
-						N'hésitez pas à explorer mon profil et à me{' '}
+						N&apos;hésitez pas à explorer mon profil et à me{' '}
 						<span className="bold">contacter</span>, si vous cherchez une
 						personne <span className="bold">motivée et passionnée</span> pour
 						rejoindre votre équipe !

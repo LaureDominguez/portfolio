@@ -10,14 +10,15 @@ const About = () => {
 				<div className="about">
 					<article>
 						<p>
-							Hello ! Je m'appelle{' '}
+							Hello ! Je m&apos;appelle{' '}
 							<span className="bold">
 								{contactData.firstName} {contactData.lastName}
 							</span>
-							, je suis <span className="bold">{contactData.job}</span> depuis peu.
+							, je suis <span className="bold">{contactData.job}</span> depuis
+							peu.
 							<br />
-							J'ai{' '}
-							<span className="bold">{contactData.age}</span>, un niveau d'
+							J&apos;ai <span className="bold">{contactData.age}</span>, un
+							niveau d&apos;
 							<span className="bold">{skillsData.divers.language}</span>, le{' '}
 							<span className="bold">{skillsData.divers.licence}</span>, et une{' '}
 							<span className="bold">{skillsData.divers.RQTH}</span>.
@@ -27,7 +28,7 @@ const About = () => {
 						<div>
 							<h4>Langages</h4>
 							<p>
-								J'ai une bonne maîtrise des languages
+								J&apos;ai une bonne maîtrise des languages
 								{skillsData.langages.map((skill, index, array) => (
 									<span
 										key={index}
@@ -38,7 +39,7 @@ const About = () => {
 											: ` ${skill},`}{' '}
 									</span>
 								))}
-								et j'ai des notions dans les languages
+								et j&apos;ai des notions dans les languages
 								{skillsData.langages2.map((skill, index, array) => (
 									<span
 										key={index}
@@ -50,13 +51,14 @@ const About = () => {
 									</span>
 								))}
 								<br />
-								Comme j'aime apprendre de{' '}
+								Comme j&apos;aime apprendre de{' '}
 								<span className="bold">nouveaux langages et concepts</span>, je
-								suis tout à fait prête à me former selon les besoins de l'équipe.
+								suis tout à fait prête à me former selon les besoins de
+								l&apos;équipe.
 								<br />
-								Je suis d'ailleurs elligible aux formations suivantes en{' '}
-								<span className="bold">contrat d'apprentissage</span> (grâce à
-								ma RQTH), disponibles chez{' '}
+								Je suis d&apos;ailleurs elligible aux formations suivantes en{' '}
+								<span className="bold">contrat d&apos;apprentissage</span>{' '}
+								(grâce à ma RQTH), disponibles chez{' '}
 								<Link
 									href={'https://openclassrooms.com/fr'}
 									target="_blank"
@@ -77,7 +79,7 @@ const About = () => {
 										rel="noopener noreferrer"
 										className="bold glowing"
 									>
-										Développeur d'application Java
+										Développeur d&apos;application Java
 									</Link>
 								</li>
 								<li>
@@ -89,7 +91,7 @@ const About = () => {
 										rel="noopener noreferrer"
 										className="bold glowing"
 									>
-										Développeur d'application Python
+										Développeur d&apos;application Python
 									</Link>
 								</li>
 								<li>
@@ -101,7 +103,7 @@ const About = () => {
 										rel="noopener noreferrer"
 										className="bold glowing"
 									>
-										Développeur d'application - Android
+										Développeur d&apos;application - Android
 									</Link>
 								</li>
 							</ul>
@@ -109,7 +111,7 @@ const About = () => {
 						<div>
 							<h4>Frameworks</h4>
 							<p>
-								J'ai appris à travailler avec les environnements
+								J&apos;ai appris à travailler avec les environnements
 								{skillsData.frameworks.map((skill, index, array) => (
 									<span
 										key={index}
@@ -141,7 +143,7 @@ const About = () => {
 						<div>
 							<h4>Hobies</h4>
 							<p>
-								J'aime
+								J&apos;aime
 								{skillsData.hobies.map((skill, index, array) => (
 									<span
 										key={index}

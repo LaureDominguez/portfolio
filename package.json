@@ -22,12 +22,16 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@babel/preset-react": "^7.23.3",
+    "@babel/preset-typescript": "^7.23.3",
+    "@next/eslint-plugin-next": "^14.0.2",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-burger-menu": "^2.8.6",
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.0.1",
+    "eslint-config-prettier": "^9.0.0",
     "typescript": "^5"
   }
 }
