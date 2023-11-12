@@ -1,34 +1,6 @@
-.sideNav {
-	z-index: 5000;
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	right: 0;
-	left: 0;
-	background-color: var(--pastel-purple);
-	display: none;
-	.round-container, ul, li{
-		height: 100%;
-		width: 100%;
-		ul, li{
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: space-around;
-			margin: 0 auto;
-			padding: 0;
-			list-style: none;
-			color: var(--deep-purple);
-			li{
-				font-size: 1.5rem;
-				border: 1px solid black;
-				.navIcon{
-					margin-right: 1rem;
-				}
-			}
-		}
-	}
-}
+// .sideNav {
+// 	// display: none;
+// }
 
 /******************* Media query *******************/
 /* Smatrphone en landscape */
@@ -61,6 +33,8 @@
 			transform: translate(-90%, -50%);
 			ul {
 				list-style: none;
+				height: auto;
+				width: auto;
 				padding: 0;
 				margin: 0;
 				z-index: 1000;
@@ -74,6 +48,8 @@
 				flex-direction: column;
 				justify-content: space-evenly;
 				li {
+					height: auto;
+					width: auto;
 					a {
 						display: flex;
 						align-items: center;

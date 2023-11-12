@@ -1,5 +1,6 @@
 'use client'
 import Link from 'next/link';
+import { isMobileOnly } from 'react-device-detect';
 import { usePathname } from 'next/navigation';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -10,6 +11,7 @@ import {
 	faLaptopCode,
 	faEnvelope,
 } from '@fortawesome/free-solid-svg-icons';
+import { useState } from 'react';
 
 
 const NavItem = ({
@@ -54,22 +56,32 @@ const Nav = () => {
 		{ href: '/pages/contact', icon: faEnvelope, title: 'Contact' },
 	];
 
-	return (
-		<nav className="sideNav">
-			<div className="round-container">
-				<ul className="menu">
-					{navItems.map((item, index) => (
-						<NavItem
-							key={index}
-							href={item.href}
-							icon={item.icon}
-							title={item.title}
-						/>
-					))}
-				</ul>
-			</div>
-		</nav>
-	);
+	const [isMenuOpen, setMenuOpen] = useState(false);
+
+		const toggleMenu = () => {
+			setMenuOpen(!isMenuOpen);
+			console.log("pouet");
+	};
+	
+		return (
+			<nav className={isMobileOnly ? 'burger' : 'sideNav'}>
+				{isMobileOnly ? (
+					<button className='burgerButton' onClick={toggleMenu}>Boutton</button>
+				) : null}
+					<div className={isMobileOnly ? '' : 'round-container'}>
+						<ul className={`menu ${isMenuOpen ? 'open' : 'closed'}`}>
+							{navItems.map((item, index) => (
+								<NavItem
+									key={index}
+									href={item.href}
+									icon={item.icon}
+									title={item.title}
+								/>
+							))}
+						</ul>
+					</div>
+			</nav>
+		);
 };
 
 export default Nav;
