@@ -1,64 +1,73 @@
+.homeCountainer {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .homeTitle{
-            text-align: end;
-        h1{
-            font-size: 3rem;
-            color: var(--rose);
-            text-shadow: 0 0 5px var(--deep-purple);
-        }
-        h2{
-            font-size: 1.5rem;
-            color: var(--aqua-blue);
-            text-shadow: 0 0 5px var(--deep-purple);
-        }
+        text-align: end;
+    h1{
+        font-size: 3rem;
+        color: var(--rose);
+        text-shadow: 0 0 5px var(--deep-purple);
     }
+    h2{
+        font-size: 1.5rem;
+        color: var(--aqua-blue);
+        text-shadow: 0 0 5px var(--deep-purple);
+    }
+}
 
-    .home{
+.home{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    color: var(--pastel-purple);
+    z-index: 15;
+    .homeImg{
+        border-radius: 30px;
+        box-shadow: 2px 5px 15px 5px #00000045;
+    }
+    div{
+        position: relative;
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
         align-items: center;
-        color: var(--pastel-purple);
-        z-index: 15;
-        .homeImg{
-            border-radius: 30px;
-            box-shadow: 2px 5px 15px 5px #00000045;
+        width: 95%;
+        margin-top: 2rem;
+        padding: 1rem 2rem;
+        line-height: 2rem;
+        border-radius: 25px;
+        background-color: var(--purple);
+        box-shadow: 2px 5px 15px 5px #00000045;
+        text-wrap: pretty;
+        h3{
+            text-align: center;
         }
-        div{
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 95%;
-            margin-top: 2rem;
-            padding: 1rem 2rem;
-            line-height: 2rem;
-            border-radius: 25px;
-            background-color: var(--purple);
-            box-shadow: 2px 5px 15px 5px #00000045;
-            text-wrap: pretty;
-            h3{
-                text-align: center;
-            }
-            p{
-                text-align: justify;
-            }
-            &::after{
-                content: '';
-                position: absolute;
-                border-left: 25px solid transparent;
-                border-bottom: 30px solid var(--purple);
-                top: -30px;
-                left: calc(20% + 50px);
-            }
-            .download{
-                text-align: center;
-                text-wrap: nowrap;
-                padding: 1rem;
-                color: var(--purple);
-                background-color: var(--pastel-purple);
-            }
+        p{
+            text-align: justify;
+            text-wrap: balance;
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            border-left: 25px solid transparent;
+            border-bottom: 30px solid var(--purple);
+            top: -30px;
+            left: calc(20% + 50px);
+        }
+        .download{
+            text-align: center;
+            text-wrap: nowrap;
+            padding: 1rem;
+            color: var(--purple);
+            background-color: var(--pastel-purple);
+        }
 
-        }
     }
+}
 
 
 /******************* Media query *******************/
@@ -107,32 +116,28 @@
 /* PC */
 @media (min-width: 1024px) {
     .homeTitle{
-        position: relative;
         h1{
-            position: absolute;
             margin: 0;
-            top: -5rem;
-            right: 0;
-            width: 80rem;
+            margin-right: 2rem;
             font-size: 5rem;
-            text-align: end;
-            z-index: 10;
         }
         h2{
             margin: 0;
-            top: 0;
+            margin-right: 2rem;
             font-size: 2rem;
-            position: relative;
-            z-index: 20;
         }
     }
 
     .home{
         flex-direction: row;
         justify-content: space-around;
+        margin-left: auto;
+        margin-right: 0;
         div{
+            position: relative;
             width: 70%;
             border-radius: 50px;
+            margin-top: 0;
             p:not(:last-of-type){
                 align-self: flex-start;
             }

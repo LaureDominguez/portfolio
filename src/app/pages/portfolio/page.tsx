@@ -33,7 +33,7 @@ const Portfolio = () => {
 					</span>
 					.
 					<br />
-					Vous pouvez découvrir le résultat final en visitant le lien vers mon
+					Vous pouvez découvrir le résultat final en visitant le lien vers mon autre
 					site web :
 				</p>
 				<Link

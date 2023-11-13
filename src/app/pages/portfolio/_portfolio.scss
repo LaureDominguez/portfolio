@@ -1,20 +1,22 @@
 .portfolio{
     z-index: 50;
-    width: 80%;
+    width: 95%;
     line-height: 1.5rem;
     margin: auto;
-    padding: 1rem 2rem;
+    padding: 2rem;
     text-align: right;
-    border-radius: 10px;
+    border-radius: 20px;
     background-color: var(--light-rose);
 
     h1{
         color: var(--purple);
+        margin-bottom: 3rem;
     }
     p{
         text-wrap: balance;
+        text-align: justify;
         color: var(--deep-purple);
-        line-height: 1.5rem;
+        line-height: 1.8rem;
     }
     a{
         padding-top: 1rem;
@@ -23,13 +25,15 @@
     .logoImg{
         cursor: pointer;
     }
-
 }
 
 
 /******************* Media query *******************/
 /* Smatrphone en landscape */
 @media screen and (max-width: 767px) and (orientation: landscape) {
+    .portfolio p{
+        text-align: end;
+    }
 }
 
 /* Tablettes */
@@ -42,4 +46,10 @@
 
 /* PC */
 @media (min-width: 1024px) {
+    .portfolio{
+        width: 70%;
+        p{
+            text-align: end;
+        }
+    }
 }

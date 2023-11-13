@@ -274,6 +274,13 @@ body {
     background-position: 0 0;
   }
 }
+.homeCountainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .homeTitle {
   text-align: end;
 }
@@ -318,6 +325,7 @@ body {
 }
 .home div p {
   text-align: justify;
+  text-wrap: balance;
 }
 .home div::after {
   content: "";
@@ -375,33 +383,27 @@ body {
 }
 /* PC */
 @media (min-width: 1024px) {
-  .homeTitle {
-    position: relative;
-  }
   .homeTitle h1 {
-    position: absolute;
     margin: 0;
-    top: -5rem;
-    right: 0;
-    width: 80rem;
+    margin-right: 2rem;
     font-size: 5rem;
-    text-align: end;
-    z-index: 10;
   }
   .homeTitle h2 {
     margin: 0;
-    top: 0;
+    margin-right: 2rem;
     font-size: 2rem;
-    position: relative;
-    z-index: 20;
   }
   .home {
     flex-direction: row;
     justify-content: space-around;
+    margin-left: auto;
+    margin-right: 0;
   }
   .home div {
+    position: relative;
     width: 70%;
     border-radius: 50px;
+    margin-top: 0;
   }
   .home div p:not(:last-of-type) {
     align-self: flex-start;
@@ -632,21 +634,23 @@ body {
 /* PC */
 .portfolio {
   z-index: 50;
-  width: 80%;
+  width: 95%;
   line-height: 1.5rem;
   margin: auto;
-  padding: 1rem 2rem;
+  padding: 2rem;
   text-align: right;
-  border-radius: 10px;
+  border-radius: 20px;
   background-color: var(--light-rose);
 }
 .portfolio h1 {
   color: var(--purple);
+  margin-bottom: 3rem;
 }
 .portfolio p {
   text-wrap: balance;
+  text-align: justify;
   color: var(--deep-purple);
-  line-height: 1.5rem;
+  line-height: 1.8rem;
 }
 .portfolio a {
   padding-top: 1rem;
@@ -657,12 +661,24 @@ body {
 
 /******************* Media query *******************/
 /* Smatrphone en landscape */
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  .portfolio p {
+    text-align: end;
+  }
+}
 /* Tablettes */
 /* Tablettes en landscape */
 /* PC */
+@media (min-width: 1024px) {
+  .portfolio {
+    width: 70%;
+  }
+  .portfolio p {
+    text-align: end;
+  }
+}
 .contact {
   margin: 0 auto;
-  padding-right: 200px;
   z-index: 50;
 }
 .contact h1 {
@@ -685,7 +701,7 @@ body {
   border-radius: 50px;
   transition: all 0.5s ease;
 }
-.contact ul li a:hover {
+.contact ul li a:hover, .contact ul li :active {
   box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 5px 5px 15px 5px rgba(0, 0, 0, 0);
 }
 .contact ul li:not(:last-child) {
@@ -703,9 +719,24 @@ body {
 
 /******************* Media query *******************/
 /* Smatrphone en landscape */
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  .contact {
+    width: 50%;
+  }
+}
 /* Tablettes */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .contact {
+    width: 50%;
+  }
+}
 /* Tablettes en landscape */
 /* PC */
+@media (min-width: 1024px) {
+  .contact {
+    padding-right: 200px;
+  }
+}
 .legal {
   width: 70%;
   margin: auto;

@@ -1,6 +1,5 @@
 .contact{
     margin: 0 auto;
-    padding-right: 200px;
     z-index: 50;
     h1{
         text-align: center;
@@ -21,7 +20,7 @@
             border-radius: 50px;
             transition: all 0.5s ease;
         }
-        li a:hover{
+        li a:hover, li :active{
             box-shadow: 
                 5px 5px 15px 5px #FF8080, 
                 -9px 5px 15px 5px #FFE488, 
@@ -44,7 +43,6 @@
     .contactIcon{
         height: 2rem;
         padding-right: 1rem;
-        // color: var(--purple);
     }
 }
 
@@ -52,10 +50,16 @@
 /******************* Media query *******************/
 /* Smatrphone en landscape */
 @media screen and (max-width: 767px) and (orientation: landscape) {
+    .contact{
+        width: 50%;
+    }
 }
 
 /* Tablettes */
 @media (min-width: 768px) and (max-width: 1023px) {
+    .contact{
+        width: 50%;
+    }
 }
 
 /* Tablettes en landscape */
@@ -64,4 +68,7 @@
 
 /* PC */
 @media (min-width: 1024px) {
+    .contact{
+        padding-right: 200px;
+    }
 }
