@@ -7,7 +7,7 @@ const Footer = () => {
     return (
 			<footer>
                 <Link href={'/'}> Laure-Web </Link>
-                | 2023 |
+                | Novembre 2023 | V1.1.0 |
 				<Link href={'/pages/legal'}> Mentions Légales </Link>
 			</footer>
 		);
