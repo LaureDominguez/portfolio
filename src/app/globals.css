@@ -1,12 +1,101 @@
-/******************* Media query *******************/
-/* Smatrphone en landscape */
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  left: 36px;
+  top: 36px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: var(--deep-purple);
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: var(--rose);
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: var(--deep-purple);
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: var(--deep-purple);
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: var(--pastel-purple);
+  padding: 0.8em;
+}
+.bm-item-list ul {
+  list-style: none;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.bm-item-list ul li a {
+  display: flex;
+  align-items: center;
+}
+.bm-item-list ul .navTitle {
+  padding-left: 1rem;
+}
+.bm-item-list ul .navIcon {
+  height: 1.8rem;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+  top: 0;
+  left: 0;
+}
+
+/******************* Media query *******************/
+/* Smatrphone en landscape */
 /* Tablettes */
 /* Tablettes en landscape */
 /* PC */
 @media (min-width: 1024px) {
   .sideNav {
+    display: block;
     position: fixed;
     top: 50%;
     bottom: 50%;
@@ -28,7 +117,6 @@
     width: auto;
     padding: 0;
     margin: 0;
-    z-index: 1000;
     height: 60vh;
     position: absolute;
     top: 50%;
@@ -54,7 +142,6 @@
   }
   .sideNav .round-container ul li a .navTitle:not(.activNav > .navTitle, a:hover > .navTitle) {
     transition: all 0.3s ease-in;
-    z-index: 5000;
     color: transparent;
   }
   .sideNav .round-container ul li a:hover {
@@ -113,6 +200,7 @@ body {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  z-index: -10;
 }
 
 .circles li {
@@ -300,7 +388,6 @@ body {
   flex-direction: column-reverse;
   align-items: center;
   color: var(--pastel-purple);
-  z-index: 15;
 }
 .home .homeImg {
   border-radius: 30px;
@@ -418,6 +505,7 @@ body {
 .aboutTitle {
   color: var(--aqua-blue);
   text-shadow: 0 0 5px var(--deep-purple);
+  text-align: right;
 }
 
 .about {
@@ -447,16 +535,17 @@ body {
 
 .aboutContainer {
   margin: auto;
-  z-index: 50;
 }
 
 /******************* Media query *******************/
-/* Smatrphone en landscape */
-/* Tablettes */
-/* Tablettes en landscape */
 /* PC */
+@media (min-width: 1024px) {
+  .aboutTitle {
+    text-align: left;
+  }
+}
 .container {
-  width: 80%;
+  width: 95%;
   margin: auto;
   background: rgba(217, 215, 255, 0.4235294118);
   border-radius: 10px;
@@ -464,6 +553,7 @@ body {
 
 .career h1 {
   text-align: center;
+  padding-top: 1rem;
 }
 
 .headersTimeline {
@@ -476,10 +566,6 @@ body {
   padding: 0.5rem;
   margin: 0;
   text-align: center;
-}
-
-.timeline article:nth-child(even) > .headersTimeline {
-  flex-direction: row-reverse;
 }
 
 .timeline article:hover {
@@ -537,10 +623,9 @@ body {
 
 .timeline {
   position: relative;
-  width: 80%;
+  width: 95%;
   margin: 0 auto;
   padding: 2rem 0;
-  z-index: 15;
 }
 
 .timeline:after {
@@ -548,18 +633,18 @@ body {
   position: absolute;
   top: 20px;
   bottom: 20px;
-  left: 50%;
+  left: 1%;
   width: 8px;
   background: var(--light-purple);
   border-radius: 3px;
-  z-index: 10;
 }
 
 .timeline article {
   position: relative;
   background: #eeeeee;
-  width: calc(50% - 40px);
-  padding: 1rem;
+  left: 12%;
+  width: 90%;
+  padding: 0.5rem;
   border-radius: 10px;
   transition: all 0.5s ease;
 }
@@ -573,10 +658,10 @@ body {
   display: block;
   position: absolute;
   top: 0;
-  left: calc(100% + 26px);
+  left: calc(-24px - 8%);
   background: rgba(217, 215, 255, 0.4235294118);
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   border: 6px var(--light-purple) solid;
   border-radius: 50%;
   z-index: 20;
@@ -586,28 +671,12 @@ body {
   content: "";
   position: absolute;
   top: 8px;
-  left: 100%;
+  right: 100%;
   width: 0;
   height: 0;
   border-top: 10px solid transparent;
-  border-left: 20px solid #eeeeee;
-  border-bottom: 10px solid transparent;
-}
-
-.timeline article:nth-child(even) {
-  margin-left: calc(50% + 48px);
-}
-
-.timeline article:nth-child(even):before {
-  left: auto;
-  right: calc(100% + 26px);
-}
-
-.timeline article:nth-child(even):after {
-  left: auto;
-  right: 100%;
-  border-left: none;
   border-right: 20px solid #eeeeee;
+  border-bottom: 10px solid transparent;
 }
 
 .timeline article li {
@@ -629,11 +698,61 @@ body {
 
 /******************* Media query *******************/
 /* Smatrphone en landscape */
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  .timeline article {
+    width: 85%;
+  }
+  .timeline article:before {
+    left: calc(-28px - 10%);
+  }
+}
 /* Tablettes */
 /* Tablettes en landscape */
 /* PC */
+@media (min-width: 1024px) {
+  .container {
+    width: 80%;
+  }
+  .timeline article:nth-child(even) > .headersTimeline {
+    flex-direction: row-reverse;
+  }
+  .timeline {
+    width: 80%;
+  }
+  .timeline:after {
+    left: 50%;
+  }
+  .timeline article {
+    left: 0;
+    width: calc(50% - 40px);
+    padding: 1rem;
+  }
+  .timeline article:before {
+    left: calc(100% + 26px);
+    width: 24px;
+    height: 24px;
+  }
+  .timeline article:after {
+    left: 100%;
+    right: 0%;
+    border-left: 20px solid #eeeeee;
+    border-right: 10px solid transparent;
+  }
+  .timeline article:nth-child(even) {
+    margin-left: calc(50% + 48px);
+  }
+  .timeline article:nth-child(even):before {
+    left: auto;
+    right: calc(100% + 26px);
+  }
+  .timeline article:nth-child(even):after {
+    left: auto;
+    right: 100%;
+    border-left: none;
+    border-right: 20px solid #eeeeee;
+  }
+}
 .portfolio {
-  z-index: 50;
   width: 95%;
   line-height: 1.5rem;
   margin: auto;
@@ -679,7 +798,7 @@ body {
 }
 .contact {
   margin: 0 auto;
-  z-index: 50;
+  margin-top: 20%;
 }
 .contact h1 {
   text-align: center;
@@ -688,7 +807,7 @@ body {
 .contact ul {
   list-style: none;
   background-color: rgba(217, 215, 255, 0.4901960784);
-  padding: 2rem 3rem;
+  padding: 1rem;
   border-radius: 20px;
 }
 .contact ul li:not(:has(a)), .contact ul a {
@@ -735,6 +854,10 @@ body {
 @media (min-width: 1024px) {
   .contact {
     padding-right: 200px;
+    margin-top: 0;
+  }
+  .contact ul {
+    padding: 2rem 3rem;
   }
 }
 .legal {
@@ -753,7 +876,6 @@ body {
 /* Tablettes en landscape */
 /* PC */
 footer {
-  z-index: 50;
   text-align: center;
   position: fixed;
   right: 0;
@@ -813,14 +935,6 @@ a, a:active, a:visited, a :-webkit-any(link) {
   font-weight: bold;
 }
 
-.circles {
-  z-index: 1;
-}
-
-nav {
-  z-index: 10;
-}
-
 /******************* Media query *******************/
 /* Smatrphone en landscape */
 /* Tablettes */
@@ -834,6 +948,5 @@ nav {
     align-items: center;
     min-height: 95vh;
     margin-left: 200px;
-    z-index: 5;
   }
 }/*# sourceMappingURL=globals.css.map */

@@ -1,5 +1,5 @@
 .container{
-    width: 80%;
+    width: 95%;
     margin: auto;
     background: #d9d7ff6c;
     border-radius: 10px;
@@ -8,6 +8,7 @@
 .career{
     h1{
         text-align: center;
+        padding-top: 1rem;
     }
 }
 
@@ -23,10 +24,6 @@
     text-align: center;
 }
 
-
-.timeline article:nth-child(even) > .headersTimeline{
-    flex-direction: row-reverse;
-}
 
 .timeline article:hover{
     box-shadow: 
@@ -95,28 +92,27 @@
 
 .timeline {
     position: relative;
-    width: 80%;
+    width: 95%;
     margin: 0 auto;
     padding: 2rem 0;
-    z-index: 15;
 }
 .timeline:after {
     content: "";
     position: absolute;
     top: 20px;
     bottom: 20px;
-    left: 50%;
+    left: 1%;
     width: 8px;
     background: var(--light-purple);
     border-radius: 3px;
-    z-index: 10;
 }
 
 .timeline article {
     position: relative;
     background: #eeeeee;
-    width: calc( 50% - 40px );
-    padding: 1rem;
+    left: 12%;
+    width: 90%;
+    padding: 0.5rem;
     border-radius: 10px;
     transition: all 0.5s ease;
 }
@@ -128,10 +124,10 @@
     display: block;
     position: absolute;
     top: 0;
-    left: calc( 100% + 26px );
+    left: calc( -24px - 8%);
     background: #d9d7ff6c;
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
     border: 6px var(--light-purple) solid;
     border-radius: 50%;
     z-index: 20;
@@ -140,26 +136,12 @@
     content: "";
     position: absolute;
     top: 8px;
-    left: 100%;
+    right: 100%;
     width: 0;
     height: 0;
     border-top: 10px solid transparent;
-    border-left: 20px solid #eeeeee;
-    border-bottom: 10px solid transparent;
-}
-
-.timeline article:nth-child(even) {
-    margin-left: calc( 50% + 48px );
-}
-.timeline article:nth-child(even):before {
-    left: auto;
-    right: calc( 100% + 26px );
-}
-.timeline article:nth-child(even):after {
-    left: auto;
-    right: 100%;
-    border-left: none;
     border-right: 20px solid #eeeeee;
+    border-bottom: 10px solid transparent;
 }
 
 .timeline article li {
@@ -182,6 +164,12 @@
 /******************* Media query *******************/
 /* Smatrphone en landscape */
 @media screen and (max-width: 767px) and (orientation: landscape) {
+    .timeline article {
+        width: 85%;
+    }
+    .timeline article:before {
+        left: calc( -28px - 10%);
+    }
 }
 
 /* Tablettes */
@@ -194,4 +182,50 @@
 
 /* PC */
 @media (min-width: 1024px) {
+    .container{
+        width: 80%;
+    }
+
+    .timeline article:nth-child(even) > .headersTimeline{
+        flex-direction: row-reverse;
+    }
+
+    .timeline {
+        width: 80%;
+    }
+    .timeline:after {
+        left: 50%;
+    }
+
+    .timeline article {
+        left: 0;
+        width: calc( 50% - 40px );
+        padding: 1rem;
+    }
+
+    .timeline article:before {
+        left: calc( 100% + 26px );
+        width: 24px;
+        height: 24px;
+    }
+    .timeline article:after {
+        left: 100%;
+        right: 0%;
+        border-left: 20px solid #eeeeee;
+        border-right: 10px solid transparent;
+    }
+
+    .timeline article:nth-child(even) {
+        margin-left: calc( 50% + 48px );
+    }
+    .timeline article:nth-child(even):before {
+        left: auto;
+        right: calc( 100% + 26px );
+    }
+    .timeline article:nth-child(even):after {
+        left: auto;
+        right: 100%;
+        border-left: none;
+        border-right: 20px solid #eeeeee;
+    }
 }
