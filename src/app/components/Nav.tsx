@@ -1,6 +1,8 @@
 'use client'
 import Link from 'next/link';
 import { isMobileOnly } from 'react-device-detect';
+import { bubble as Menu } from 'react-burger-menu';
+
 import { usePathname } from 'next/navigation';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -12,6 +14,7 @@ import {
 	faEnvelope,
 } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
+import classNames from 'classnames';
 
 
 const NavItem = ({
@@ -24,14 +27,18 @@ const NavItem = ({
 	title: string;
 	}) => {
 
-
 	const pathName = usePathname();
 	const isActive = pathName === href;
 	return (
 		<li>
 			<Link
 				href={href}
-				className={isActive ? 'activNav' : ''}
+				className={
+					classNames({
+						activNav: isActive,
+						menuItem: isMobileOnly
+					})
+				}
 			>
 				<FontAwesomeIcon
 					icon={icon}
@@ -43,7 +50,45 @@ const NavItem = ({
 	);
 };
 
-const Nav = () => {
+const navItems = [
+	{ href: '/', icon: faHouse, title: 'Home' },
+	{ href: '/pages/about', icon: faCircleUser, title: 'About' },
+	{ href: '/pages/career', icon: faBriefcase, title: 'Career' },
+	{
+		href: '/pages/portfolio',
+		icon: faLaptopCode,
+		title: 'Portfolio',
+	},
+	{ href: '/pages/contact', icon: faEnvelope, title: 'Contact' },
+];
+
+const NavList = ({
+	items,
+}: {
+	items: Array<{ href: string; icon: any; title: string }>;
+}) => (
+	<ul>
+		{items.map((item, index) => (
+			<NavItem
+				key={index}
+				href={item.href}
+				icon={item.icon}
+				title={item.title}
+			/>
+		))}
+	</ul>
+);
+
+
+const BurgerMenu = () => {
+	return (
+		<Menu>
+			<NavList items={navItems} />
+		</Menu>
+	);
+}
+
+const SideNav = () => {
 	const navItems = [
 		{ href: '/', icon: faHouse, title: 'Home' },
 		{ href: '/pages/about', icon: faCircleUser, title: 'About' },
@@ -55,33 +100,15 @@ const Nav = () => {
 		},
 		{ href: '/pages/contact', icon: faEnvelope, title: 'Contact' },
 	];
+	return (
+		<nav className="sideNav">
+			<div className="round-container">
+				<NavList items={navItems} />
+			</div>
+		</nav>
+	);
+}
 
-	const [isMenuOpen, setMenuOpen] = useState(false);
-
-		const toggleMenu = () => {
-			setMenuOpen(!isMenuOpen);
-			console.log("pouet");
-	};
-	
-		return (
-			<nav className={isMobileOnly ? 'burger' : 'sideNav'}>
-				{isMobileOnly ? (
-					<button className='burgerButton' onClick={toggleMenu}>Boutton</button>
-				) : null}
-					<div className={isMobileOnly ? '' : 'round-container'}>
-						<ul className={`menu ${isMenuOpen ? 'open' : 'closed'}`}>
-							{navItems.map((item, index) => (
-								<NavItem
-									key={index}
-									href={item.href}
-									icon={item.icon}
-									title={item.title}
-								/>
-							))}
-						</ul>
-					</div>
-			</nav>
-		);
-};
+const Nav = () => (isMobileOnly ? <BurgerMenu /> : <SideNav />);
 
 export default Nav;

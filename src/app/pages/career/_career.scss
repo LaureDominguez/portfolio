@@ -98,7 +98,6 @@
     width: 80%;
     margin: 0 auto;
     padding: 2rem 0;
-    z-index: 15;
 }
 .timeline:after {
     content: "";
@@ -109,7 +108,6 @@
     width: 8px;
     background: var(--light-purple);
     border-radius: 3px;
-    z-index: 10;
 }
 
 .timeline article {

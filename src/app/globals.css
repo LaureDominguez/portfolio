@@ -1,12 +1,101 @@
-/******************* Media query *******************/
-/* Smatrphone en landscape */
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  left: 36px;
+  top: 36px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: var(--deep-purple);
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: var(--rose);
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: var(--deep-purple);
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: var(--deep-purple);
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: var(--pastel-purple);
+  padding: 0.8em;
+}
+.bm-item-list ul {
+  list-style: none;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.bm-item-list ul li a {
+  display: flex;
+  align-items: center;
+}
+.bm-item-list ul .navTitle {
+  padding-left: 1rem;
+}
+.bm-item-list ul .navIcon {
+  height: 1.8rem;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+  top: 0;
+  left: 0;
+}
+
+/******************* Media query *******************/
+/* Smatrphone en landscape */
 /* Tablettes */
 /* Tablettes en landscape */
 /* PC */
 @media (min-width: 1024px) {
   .sideNav {
+    display: block;
     position: fixed;
     top: 50%;
     bottom: 50%;
@@ -28,7 +117,6 @@
     width: auto;
     padding: 0;
     margin: 0;
-    z-index: 1000;
     height: 60vh;
     position: absolute;
     top: 50%;
@@ -54,7 +142,6 @@
   }
   .sideNav .round-container ul li a .navTitle:not(.activNav > .navTitle, a:hover > .navTitle) {
     transition: all 0.3s ease-in;
-    z-index: 5000;
     color: transparent;
   }
   .sideNav .round-container ul li a:hover {
@@ -113,6 +200,7 @@ body {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  z-index: -10;
 }
 
 .circles li {
@@ -300,7 +388,6 @@ body {
   flex-direction: column-reverse;
   align-items: center;
   color: var(--pastel-purple);
-  z-index: 15;
 }
 .home .homeImg {
   border-radius: 30px;
@@ -447,7 +534,6 @@ body {
 
 .aboutContainer {
   margin: auto;
-  z-index: 50;
 }
 
 /******************* Media query *******************/
@@ -540,7 +626,6 @@ body {
   width: 80%;
   margin: 0 auto;
   padding: 2rem 0;
-  z-index: 15;
 }
 
 .timeline:after {
@@ -552,7 +637,6 @@ body {
   width: 8px;
   background: var(--light-purple);
   border-radius: 3px;
-  z-index: 10;
 }
 
 .timeline article {
@@ -633,7 +717,6 @@ body {
 /* Tablettes en landscape */
 /* PC */
 .portfolio {
-  z-index: 50;
   width: 95%;
   line-height: 1.5rem;
   margin: auto;
@@ -679,7 +762,6 @@ body {
 }
 .contact {
   margin: 0 auto;
-  z-index: 50;
 }
 .contact h1 {
   text-align: center;
@@ -753,7 +835,6 @@ body {
 /* Tablettes en landscape */
 /* PC */
 footer {
-  z-index: 50;
   text-align: center;
   position: fixed;
   right: 0;
@@ -813,14 +894,6 @@ a, a:active, a:visited, a :-webkit-any(link) {
   font-weight: bold;
 }
 
-.circles {
-  z-index: 1;
-}
-
-nav {
-  z-index: 10;
-}
-
 /******************* Media query *******************/
 /* Smatrphone en landscape */
 /* Tablettes */
@@ -834,6 +907,5 @@ nav {
     align-items: center;
     min-height: 95vh;
     margin-left: 200px;
-    z-index: 5;
   }
 }/*# sourceMappingURL=globals.css.map */

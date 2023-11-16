@@ -54,14 +54,6 @@ a, a:active, a:visited, a :-webkit-any(link){
     font-weight: bold;
 }
 
-.circles{
-    z-index: 1;
-}
-
-nav{
-    z-index: 10;
-}
-
 /******************* Media query *******************/
 /* Smatrphone en landscape */
 @media screen and (max-width: 767px) and (orientation: landscape) {
@@ -84,6 +76,5 @@ nav{
         align-items: center;
         min-height: 95vh;
         margin-left: 200px;
-        z-index: 5;
     }
 }
